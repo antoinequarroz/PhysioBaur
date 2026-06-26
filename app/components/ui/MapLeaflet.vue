@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { onMounted, ref, onUnmounted } from 'vue'
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
 
 const props = defineProps<{
   latitude: number
@@ -11,21 +9,25 @@ const props = defineProps<{
 }>()
 
 const mapContainer = ref<HTMLElement | null>(null)
-const map = ref<L.Map | null>(null)
+const map = ref<any>(null)
 
-onMounted(() => {
-  if (!mapContainer.value) return
+onMounted(async () => {
+  if (!mapContainer.value || typeof window === 'undefined') return
+
+  // Import dynamique côté client uniquement
+  const L = await import('leaflet')
+  const leaflet = L.default || L
 
   // Fix pour les icônes Leaflet (problème avec Vite/Webpack)
-  delete (L.Icon.Default.prototype as any)._getIconUrl
-  L.Icon.Default.mergeOptions({
+  delete (leaflet.Icon.Default.prototype as any)._getIconUrl
+  leaflet.Icon.Default.mergeOptions({
     iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
     iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
     shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
   })
 
   // Initialiser la carte
-  map.value = L.map(mapContainer.value, {
+  map.value = leaflet.map(mapContainer.value, {
     center: [props.latitude, props.longitude],
     zoom: props.zoom || 16,
     zoomControl: false,
@@ -33,13 +35,13 @@ onMounted(() => {
   })
 
   // Ajouter le layer OpenStreetMap
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 19,
   }).addTo(map.value)
 
   // Ajouter le marqueur
-  const marker = L.marker([props.latitude, props.longitude], {
+  leaflet.marker([props.latitude, props.longitude], {
     title: props.popupText || 'PhysioBaur',
   })
     .addTo(map.value)
@@ -56,10 +58,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    ref="mapContainer"
-    class="h-[300px] w-full rounded-[1.35rem] sm:rounded-[1.65rem]"
-  />
+  <ClientOnly>
+    <div
+      ref="mapContainer"
+      class="h-[300px] w-full rounded-[1.35rem] sm:rounded-[1.65rem]"
+    />
+  </ClientOnly>
 </template>
 
 <style scoped>
