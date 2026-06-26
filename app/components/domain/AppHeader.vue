@@ -2,13 +2,13 @@
 const navigation = [
   { label: 'Accueil', href: '/#accueil' },
   { label: 'Pourquoi', href: '/#pourquoi' },
-  { label: 'Therapeute', href: '/#a-propos' },
+  { label: 'Thérapeute', href: '/#a-propos' },
   { label: 'Domaines', href: '/#domaines' },
   { label: 'Prestations', href: '/#prestations' },
   { label: 'Tarifs', href: '/#tarifs' },
   { label: 'Avis', href: '/#avis' },
   { label: 'Infos', href: '/#infos' },
-  { label: 'Contact', href: '/#contact' }
+  { label: 'Contact', href: '/#contact' },
 ]
 
 const isOpen = ref(false)
@@ -19,10 +19,15 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[color:color-mix(in_oklab,var(--color-bg)_86%,transparent)] backdrop-blur-xl">
+  <header
+    class="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[color:color-mix(in_oklab,var(--color-bg)_86%,transparent)] backdrop-blur-xl"
+  >
     <AppContainer>
       <div class="flex h-16 items-center justify-between gap-3 sm:h-18">
-        <NuxtLink to="/#accueil" class="text-[1.02rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-lg">
+        <NuxtLink
+          to="/#accueil"
+          class="text-[1.02rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-lg"
+        >
           PhysioBaur
         </NuxtLink>
 
@@ -48,7 +53,9 @@ const closeMenu = () => {
           aria-label="Ouvrir le menu"
           @click="isOpen = !isOpen"
         >
-          <span class="text-xs font-semibold uppercase tracking-[0.18em]">{{ isOpen ? 'Fermer' : 'Menu' }}</span>
+          <span class="text-xs font-semibold uppercase tracking-[0.18em]">{{
+            isOpen ? 'Fermer' : 'Menu'
+          }}</span>
         </button>
       </div>
 

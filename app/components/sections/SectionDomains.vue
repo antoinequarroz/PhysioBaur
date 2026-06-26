@@ -26,59 +26,59 @@ const domains: DomainItem[] = [
       'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&auto=format&fit=crop&q=80',
     points: [
       {
-        title: 'Prise en charge avant et apres une intervention chirurgicale',
-        text: 'Prothese, coiffe des rotateurs, LCA, meniscectomie, vertebroplastie.',
+        title: 'Prise en charge avant et après une intervention chirurgicale',
+        text: 'Prothèse, coiffe des rotateurs, LCA, méniscectomie, vertébroplastie.',
       },
       {
-        title: 'Traitement des douleurs aigues, chroniques et rhumatismales',
+        title: 'Traitement des douleurs aiguës, chroniques et rhumatismales',
         text: 'Lombalgies, cervicalgies, hernies discales, tendinopathies, arthrose, arthrite.',
       },
       {
-        title: 'Prise en charge des deficiences articulaires',
-        text: 'Arthrose, lesions ligamentaires, entorses, luxations, fractures.',
+        title: 'Prise en charge des déficiences articulaires',
+        text: 'Arthrose, lésions ligamentaires, entorses, luxations, fractures.',
       },
       {
-        title: 'Reeducation des lesions musculaires et tendineuses',
-        text: 'Dechirures musculaires, tendinopathies.',
+        title: 'Rééducation des lésions musculaires et tendineuses',
+        text: 'Déchirures musculaires, tendinopathies.',
       },
     ],
   },
   {
     key: 'sport',
     step: 'Domaine 2',
-    title: 'Physiotherapie du sport',
+    title: 'Physiothérapie du sport',
     description:
-      "Une prise en charge du sportif orientee vers la recuperation, le retour progressif a l'activite et la prevention des blessures.",
+      "Une prise en charge du sportif orientée vers la récupération, le retour progressif à l'activité et la prévention des blessures.",
     image:
       'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&auto=format&fit=crop&q=80',
     points: [
       {
-        title: 'Prevention des blessures',
-        text: 'Analyse des antecedents, du mouvement et des facteurs de risque pour prevenir les blessures sportives.',
+        title: 'Prévention des blessures',
+        text: 'Analyse des antécédents, du mouvement et des facteurs de risque pour prévenir les blessures sportives.',
       },
       {
-        title: 'Reentrainement',
-        text: "Developpement des capacites sportives avec un travail adapte a l'entrainement et a la preparation physique.",
+        title: 'Réentraînement',
+        text: "Développement des capacités sportives avec un travail adapté à l'entraînement et à la préparation physique.",
       },
       {
-        title: 'Reathletisation',
-        text: 'Transition entre reeducation fonctionnelle et retour a la competition, en tenant compte des exigences de la discipline.',
+        title: 'Réathlétisation',
+        text: 'Transition entre rééducation fonctionnelle et retour à la compétition, en tenant compte des exigences de la discipline.',
       },
       {
-        title: 'Conseils & accompagnement personnalise de sportifs',
-        text: 'Conseils, strategie de reprise et accompagnement personnalise pour reduire les risques et optimiser le retour au niveau attendu.',
+        title: 'Conseils & accompagnement personnalisé de sportifs',
+        text: 'Conseils, stratégie de reprise et accompagnement personnalisé pour réduire les risques et optimiser le retour au niveau attendu.',
       },
     ],
-    note: "Membre de Sportfisio\nMembre du staff medical de l'Association Suisse de Football",
+    note: "Membre de Sportfisio\nMembre du staff médical de l'Association Suisse de Football",
   },
   {
     key: 'home',
     step: 'Domaine 3',
-    title: 'Traitement a domicile',
+    title: 'Traitement à domicile',
     description:
-      "Des traitements adaptes aux personnes agees, a mobilite reduite, accidentees ou en situation de handicap, avec un objectif d'autonomie et de continuite des soins.",
+      "Des traitements adaptés aux personnes âgées, à mobilité réduite, accidentées ou en situation de handicap, avec un objectif d'autonomie et de continuité des soins.",
     intro:
-      'Sur prescription medicale, deplacements a domicile dans la region de Sion et Grimisuat.',
+      'Sur prescription médicale, déplacements à domicile dans la région de Sion et Grône.',
     image:
       'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1200&auto=format&fit=crop&q=80',
     points: [
@@ -153,7 +153,8 @@ onBeforeUnmount(() => {
       <AppSectionHeading
         eyebrow="Domaines d'intervention"
         title="Trois grands domaines structurent la prise en charge du cabinet."
-        description="PhysioBaur intervient principalement en reeducation musculosquelettique, physiotherapie du sport et traitement a domicile sur prescription medicale."
+        description="PhysioBaur intervient principalement en rééducation musculo-squelettique, physiothérapie du sport et traitement à domicile sur prescription médicale."
+        align="center"
       />
 
       <AppReveal :delay="70">

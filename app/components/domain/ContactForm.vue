@@ -12,7 +12,7 @@ const form = reactive<ContactPayload>({
   email: '',
   phone: '',
   subject: '',
-  message: ''
+  message: '',
 })
 
 const status = ref<'idle' | 'pending' | 'success' | 'error'>('idle')
@@ -25,22 +25,22 @@ const submitForm = async () => {
   try {
     await $fetch('/api/contact', {
       method: 'POST',
-      body: form
+      body: form,
     })
 
     status.value = 'success'
-    feedback.value = 'Votre demande a bien ete envoyee. Nous vous recontactons rapidement.'
+    feedback.value =
+      'Votre demande a bien été envoyée. Nous vous recontactons rapidement.'
     Object.assign(form, {
       name: '',
       email: '',
       phone: '',
       subject: '',
-      message: ''
+      message: '',
     })
-  }
-  catch {
+  } catch {
     status.value = 'error'
-    feedback.value = "Une erreur est survenue. Merci d'essayer a nouveau."
+    feedback.value = "Une erreur est survenue. Merci d'essayer à nouveau."
   }
 }
 </script>
@@ -56,7 +56,7 @@ const submitForm = async () => {
           type="text"
           autocomplete="name"
           class="w-full rounded-[1.05rem] bg-[color:color-mix(in_oklab,var(--color-surface)_96%,transparent)] px-4 py-3 text-base outline-none ring-1 ring-black/4 transition focus:ring-2 focus:ring-[var(--color-accent)] dark:ring-white/8 sm:rounded-2xl"
-        >
+        />
       </label>
       <label class="space-y-2 text-sm font-medium text-[var(--color-text)]">
         <span>E-mail</span>
@@ -66,18 +66,18 @@ const submitForm = async () => {
           type="email"
           autocomplete="email"
           class="w-full rounded-[1.05rem] bg-[color:color-mix(in_oklab,var(--color-surface)_96%,transparent)] px-4 py-3 text-base outline-none ring-1 ring-black/4 transition focus:ring-2 focus:ring-[var(--color-accent)] dark:ring-white/8 sm:rounded-2xl"
-        >
+        />
       </label>
     </div>
     <div class="grid gap-4 sm:grid-cols-2">
       <label class="space-y-2 text-sm font-medium text-[var(--color-text)]">
-        <span>Telephone</span>
+        <span>Téléphone</span>
         <input
           v-model="form.phone"
           type="tel"
           autocomplete="tel"
           class="w-full rounded-[1.05rem] bg-[color:color-mix(in_oklab,var(--color-surface)_96%,transparent)] px-4 py-3 text-base outline-none ring-1 ring-black/4 transition focus:ring-2 focus:ring-[var(--color-accent)] dark:ring-white/8 sm:rounded-2xl"
-        >
+        />
       </label>
       <label class="space-y-2 text-sm font-medium text-[var(--color-text)]">
         <span>Sujet</span>
@@ -86,7 +86,7 @@ const submitForm = async () => {
           required
           type="text"
           class="w-full rounded-[1.05rem] bg-[color:color-mix(in_oklab,var(--color-surface)_96%,transparent)] px-4 py-3 text-base outline-none ring-1 ring-black/4 transition focus:ring-2 focus:ring-[var(--color-accent)] dark:ring-white/8 sm:rounded-2xl"
-        >
+        />
       </label>
     </div>
     <label class="block space-y-2 text-sm font-medium text-[var(--color-text)]">
@@ -105,7 +105,11 @@ const submitForm = async () => {
       <p
         v-if="feedback"
         class="text-sm"
-        :class="status === 'success' ? 'text-sky-600 dark:text-sky-400' : 'text-rose-600 dark:text-rose-400'"
+        :class="
+          status === 'success'
+            ? 'text-sky-600 dark:text-sky-400'
+            : 'text-rose-600 dark:text-rose-400'
+        "
       >
         {{ feedback }}
       </p>
