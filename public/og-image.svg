@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f6f2"/>
+  <circle cx="850" cy="210" r="180" fill="#cbe8e3"/>
+  <circle cx="930" cy="270" r="120" fill="#88c8c0"/>
+  <text x="110" y="250" fill="#0f1d1d" font-family="Arial, sans-serif" font-size="76" font-weight="700">PhysioBaur</text>
+  <text x="110" y="340" fill="#2c3838" font-family="Arial, sans-serif" font-size="40">Physiothérapie moderne et personnalisée en Valais</text>
+</svg>
