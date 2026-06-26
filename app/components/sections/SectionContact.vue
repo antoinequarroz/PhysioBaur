@@ -130,7 +130,7 @@ const openMaps = () => {
                 width="100%"
                 height="300"
                 style="border: 0"
-                allowfullscreen=""
+                allowfullscreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 class="rounded-t-[1.35rem] sm:rounded-[1.65rem] w-full"
