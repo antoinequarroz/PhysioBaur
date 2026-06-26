@@ -123,19 +123,14 @@ const openMaps = () => {
           <div
             class="rounded-[1.35rem] surface-card-soft p-4 sm:rounded-[1.65rem] sm:p-7"
           >
-            <!-- Google Maps -->
-            <div class="mb-6 -mx-4 -mt-4 sm:-mx-7 sm:-mt-7">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.123456789!2d7.358984!3d46.231234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDEyJzQwLjAiTiA3M8KzMTcnMjEuMCJX!5e0!3m2!1sfr!2sch!4v1234567890123!5m2!1sfr!2sch"
-                width="100%"
-                height="300"
-                style="border: 0"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                class="rounded-t-[1.35rem] sm:rounded-[1.65rem] w-full"
-              ></iframe>
-            </div>
+            <!-- Map with Leaflet -->
+            <MapLeaflet
+              :latitude="46.2297"
+              :longitude="7.3586"
+              :zoom="16"
+              popup-text="PhysioBaur - Rue du Stade 4, 1950 Sion"
+              class="mb-6"
+            />
             <ContactForm />
           </div>
         </AppReveal>
