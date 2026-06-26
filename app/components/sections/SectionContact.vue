@@ -123,14 +123,18 @@ const openMaps = () => {
           <div
             class="rounded-[1.35rem] surface-card-soft p-4 sm:rounded-[1.65rem] sm:p-7"
           >
-            <!-- Map with Leaflet -->
-            <MapLeaflet
-              :latitude="46.2297"
-              :longitude="7.3586"
-              :zoom="16"
-              popup-text="PhysioBaur - Rue du Stade 4, 1950 Sion"
-              class="mb-6"
-            />
+            <!-- OpenStreetMap Embed -->
+            <div class="mb-6 h-64 w-full overflow-hidden rounded-lg">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=7.354,46.226,7.364,46.234&layer=mapnik&marker=46.2297,7.3586"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen
+                loading="lazy"
+              />
+            </div>
             <ContactForm />
           </div>
         </AppReveal>
