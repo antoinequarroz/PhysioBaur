@@ -10,61 +10,68 @@ type TariffCard = {
   title: string
   description: string
   lines: TariffLine[]
+  isPopular?: boolean
 }
 
 const tariffCards: TariffCard[] = [
   {
-    eyebrow: 'Physiotherapie',
-    title: 'Physiotherapie',
+    eyebrow: 'Physiothérapie',
+    title: 'Physiothérapie',
     description:
-      "Le format central du cabinet pour le suivi general, la reeducation fonctionnelle et le retour progressif a l'activite.",
+      "Le format central du cabinet pour le suivi général, la rééducation fonctionnelle et le retour progressif à l'activité.",
+    isPopular: true,
     lines: [
       {
-        label: 'Seance de physiotherapie',
+        label: 'Séance de physiothérapie',
         duration: '30 min',
-        price: '60.-'
+        price: '60.-',
       },
       {
-        label: 'Seance de physiotherapie',
+        label: 'Séance de physiothérapie',
         duration: '60 min',
-        price: '120.-'
-      }
-    ]
+        price: '120.-',
+      },
+    ],
   },
   {
-    eyebrow: 'Technique complementaire',
+    eyebrow: 'Technique complémentaire',
     title: 'Dry needling',
     description:
-      'Integre selon la situation clinique dans une prise en charge ciblee et adaptee au bilan.',
+      'Intégré selon la situation clinique dans une prise en charge ciblée et adaptée au bilan.',
     lines: [
       {
-        label: 'Seance de dry needling',
+        label: 'Séance de dry needling',
         duration: '30 min',
-        price: '60.-'
-      }
-    ]
+        price: '60.-',
+      },
+    ],
   },
   {
-    eyebrow: 'Recuperation',
+    eyebrow: 'Récupération',
     title: 'Massage',
     description:
-      'Approche complementaire pour relacher, recuperer et accompagner certaines phases de traitement.',
+      'Approche complémentaire pour relâcher, récupérer et accompagner certaines phases de traitement',
     lines: [
       {
         label: 'Massage',
         duration: '30 min',
-        price: '60.-'
+        price: '60.-',
       },
       {
         label: 'Massage',
         duration: '60 min',
-        price: '120.-'
-      }
-    ]
-  }
+        price: '120.-',
+      },
+    ],
+  },
 ]
 
-const supportBadges = ['LAMal', 'LAA', "Jusqu'a 9 seances", 'Prescription medicale']
+const supportBadges = [
+  'LAMal',
+  'LAA',
+  'Jusqu’à 9 séances',
+  'Prescription médicale',
+]
 </script>
 
 <template>
@@ -78,12 +85,14 @@ const supportBadges = ['LAMal', 'LAA', "Jusqu'a 9 seances", 'Prescription medica
       <AppSectionHeading
         eyebrow="Tarifs"
         title="Des tarifs clairs et une prise en charge transparente."
-        description="En Suisse, la physiotherapie est prise en charge par l'assurance maladie de base (LAMal) et l'assurance accident (LAA), sous certaines conditions. Une prescription medicale est necessaire et couvre generalement jusqu'a 9 seances par prescription."
+        description="En Suisse, la physiothérapie est prise en charge par l'assurance maladie de base (LAMal) et l'assurance accident (LAA), sous certaines conditions. Une prescription médicale est nécessaire et couvre généralement jusqu’à 9 séances par prescription."
         align="center"
       />
 
       <AppReveal :delay="60">
-        <div class="mt-5 flex flex-wrap items-center justify-center gap-2.5 sm:mt-6 sm:gap-3">
+        <div
+          class="mt-5 flex flex-wrap items-center justify-center gap-2.5 sm:mt-6 sm:gap-3"
+        >
           <AppBadge
             v-for="badge in supportBadges"
             :key="badge"
@@ -92,14 +101,16 @@ const supportBadges = ['LAMal', 'LAA', "Jusqu'a 9 seances", 'Prescription medica
         </div>
       </AppReveal>
 
-      <div class="mx-auto mt-8 grid max-w-5xl gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-3">
+      <div
+        class="mx-auto mt-8 grid max-w-5xl gap-4 sm:mt-10 sm:gap-5 lg:grid-cols-3"
+      >
         <AppReveal
           v-for="(card, index) in tariffCards"
           :key="card.title"
           :delay="index * 90"
         >
           <article
-            class="relative h-full rounded-[1.45rem] p-4 sm:rounded-[1.75rem] sm:p-6"
+            class="relative h-full rounded-[1.45rem] p-4 sm:rounded-[1.75rem] sm:p-6 flex flex-col"
             :class="index === 0 ? 'surface-card-accent' : 'surface-card-soft'"
           >
             <div
@@ -107,13 +118,26 @@ const supportBadges = ['LAMal', 'LAA', "Jusqu'a 9 seances", 'Prescription medica
               class="pointer-events-none absolute inset-x-10 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(96,165,250,0.7),transparent)]"
             />
 
-            <p class="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
-              {{ card.eyebrow }}
-            </p>
-            <h3 class="mt-3 text-[1.35rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[1.65rem]">
+            <div class="flex items-start justify-between gap-3">
+              <p
+                class="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]"
+              >
+                {{ card.eyebrow }}
+              </p>
+              <AppBadge
+                v-if="card.isPopular"
+                label="Populaire"
+                class="flex-shrink-0 !bg-[var(--color-accent)] !text-white"
+              />
+            </div>
+            <h3
+              class="mt-3 text-[1.35rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[1.65rem]"
+            >
               {{ card.title }}
             </h3>
-            <p class="mt-3 text-sm leading-6 text-[var(--color-text-muted)] sm:leading-7">
+            <p
+              class="mt-3 text-sm leading-6 text-[var(--color-text-muted)] sm:leading-7"
+            >
               {{ card.description }}
             </p>
 
@@ -125,7 +149,9 @@ const supportBadges = ['LAMal', 'LAA', "Jusqu'a 9 seances", 'Prescription medica
               >
                 <div class="flex items-end justify-between gap-4">
                   <div>
-                    <p class="text-base font-medium text-[var(--color-heading)]">
+                    <p
+                      class="text-base font-medium text-[var(--color-heading)]"
+                    >
                       {{ line.label }}
                     </p>
                     <p class="mt-1 text-sm text-[var(--color-text-muted)]">
@@ -133,20 +159,35 @@ const supportBadges = ['LAMal', 'LAA', "Jusqu'a 9 seances", 'Prescription medica
                     </p>
                   </div>
 
-                  <p class="text-[1.45rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[1.8rem]">
+                  <p
+                    class="text-[1.45rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[1.8rem]"
+                  >
                     {{ line.price }}
                   </p>
                 </div>
               </div>
+            </div>
+            <div class="mt-6 flex-grow flex items-end">
+              <AppButton
+                label="Prendre rendez-vous"
+                href="/#contact"
+                class="w-full"
+              />
             </div>
           </article>
         </AppReveal>
       </div>
 
       <AppReveal :delay="180">
-        <div class="mx-auto mt-7 max-w-3xl border-t border-[var(--color-border-strong)] pt-5 text-center sm:mt-10 sm:pt-6">
-          <p class="text-sm leading-7 text-[var(--color-text-muted)] sm:text-base">
-            Un renouvellement de prescription peut etre accorde si necessaire. Les therapies peuvent etre dispensees en cabinet ou a domicile selon l'ordonnance medicale et les traitements requis.
+        <div
+          class="mx-auto mt-7 max-w-3xl border-t border-[var(--color-border-strong)] pt-5 text-center sm:mt-10 sm:pt-6"
+        >
+          <p
+            class="text-sm leading-7 text-[var(--color-text-muted)] sm:text-base"
+          >
+            Un renouvellement de prescription peut être accordé si nécessaire.
+            Les thérapies peuvent être dispensées en cabinet ou à domicile selon
+            l'ordonnance médicale et les traitements requis.
           </p>
         </div>
       </AppReveal>

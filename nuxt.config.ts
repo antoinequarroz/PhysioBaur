@@ -30,10 +30,12 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'fr',
       },
-      viewport: 'width=device-width, initial-scale=1',
+      viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
       titleTemplate: '%s | PhysioBaur',
       meta: [
         { charset: 'utf-8' },
+        { name: 'HandheldFriendly', content: 'True' },
+        { name: 'MobileOptimized', content: '320' },
         {
           name: 'theme-color',
           media: '(prefers-color-scheme: light)',
