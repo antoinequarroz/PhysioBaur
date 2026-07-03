@@ -54,10 +54,17 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    smtpHost: '',
+    smtpPort: '587',
+    smtpUser: '',
+    smtpPass: '',
+    contactToEmail: 'info@physiobaur.ch',
+    turnstileSecretKey: '',
     public: {
       siteUrl: 'https://physiobaur.ch',
       siteName: 'PhysioBaur',
       siteRegion: 'Valais',
+      turnstileSiteKey: '',
     },
   },
   typescript: {

@@ -7,6 +7,44 @@ type ContactPayload = {
   message: string
 }
 
+declare global {
+  interface Window {
+    onTurnstileSuccess?: (token: string) => void
+    onTurnstileExpired?: () => void
+    turnstile?: {
+      reset: (widgetId?: string) => void
+    }
+  }
+}
+
+const config = useRuntimeConfig()
+const turnstileToken = ref('')
+const company = ref('')
+
+useHead({
+  script: [
+    {
+      src: 'https://challenges.cloudflare.com/turnstile/v0/api.js',
+      async: true,
+      defer: true,
+    },
+  ],
+})
+
+onMounted(() => {
+  window.onTurnstileSuccess = (token: string) => {
+    turnstileToken.value = token
+  }
+  window.onTurnstileExpired = () => {
+    turnstileToken.value = ''
+  }
+})
+
+onBeforeUnmount(() => {
+  window.onTurnstileSuccess = undefined
+  window.onTurnstileExpired = undefined
+})
+
 const form = reactive<ContactPayload>({
   name: '',
   email: '',
@@ -64,13 +102,23 @@ const feedback = ref('')
 const submitForm = async () => {
   if (!validateForm()) return
 
+  if (!turnstileToken.value) {
+    status.value = 'error'
+    feedback.value = 'Merci de valider le contrôle de sécurité avant d\'envoyer.'
+    return
+  }
+
   status.value = 'pending'
   feedback.value = ''
 
   try {
     await $fetch('/api/contact', {
       method: 'POST',
-      body: form,
+      body: {
+        ...form,
+        turnstileToken: turnstileToken.value,
+        company: company.value,
+      },
     })
 
     status.value = 'success'
@@ -90,6 +138,8 @@ const submitForm = async () => {
       subject: '',
       message: '',
     })
+    turnstileToken.value = ''
+    window.turnstile?.reset()
   } catch {
     status.value = 'error'
     feedback.value = "Une erreur est survenue. Merci d'essayer à nouveau."
@@ -190,6 +240,26 @@ const submitForm = async () => {
         {{ errors.message }}
       </p>
     </label>
+
+    <input
+      v-model="company"
+      type="text"
+      name="company"
+      tabindex="-1"
+      autocomplete="off"
+      aria-hidden="true"
+      class="absolute left-[-9999px] h-0 w-0 opacity-0"
+    />
+
+    <ClientOnly>
+      <div
+        class="cf-turnstile"
+        :data-sitekey="config.public.turnstileSiteKey"
+        data-callback="onTurnstileSuccess"
+        data-expired-callback="onTurnstileExpired"
+      />
+    </ClientOnly>
+
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
       <AppButton
         :label="status === 'pending' ? 'Envoi...' : 'Envoyer la demande'"
