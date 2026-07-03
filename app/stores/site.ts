@@ -3,10 +3,11 @@ export const useSiteStore = defineStore('site', () => {
   const email = 'contact@physiobaur.ch'
   const address = 'Rue du Stade 4, 1950 Sion, Valais'
   const heroBadges = [
-    'Troubles musculosquelettiques',
-    'Therapie manuelle',
-    'Physiotherapie du sport',
-    'Suivi structure'
+    'Physiothérapie générale',
+    'Physiothérapie du sport',
+    'Thérapie manuelle',
+    'Rééducation active',
+    'Approche fondée sur les preuves'
   ]
 
   return {

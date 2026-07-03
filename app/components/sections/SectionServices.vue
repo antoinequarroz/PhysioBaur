@@ -16,12 +16,16 @@ const serviceCards: ServiceCard[] = [
     imageSrc:
       'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&auto=format&fit=crop&q=80',
     items: [
-      'Différents concepts de thérapie manuelle',
+      'Evaluation sportive',
+      'Rééducation',
+      'Différents concepts de thérapie manuelle (SAMT, Maitland, Cyriax, Sohier, …)',
       'Renforcement musculaire',
       'Proprioception',
       'Drainage lymphatique manuel',
-      'Electrostimulation, Compex',
+      'Massage',
+      'Electrothérapie (Compex, Teecar, …)',
       'Crochetage myo-fasciaux',
+      'Flossing therapy (Blood Flow Restriction)',
       'Taping & Kinesio-Taping',
       'Dry needling',
       'Trigger point',
@@ -55,8 +59,7 @@ const serviceCards: ServiceCard[] = [
     title: 'Thérapie manuelle',
     description:
       'Des techniques ciblées pour restaurer le mouvement, réduire certaines douleurs et soutenir le traitement fonctionnel',
-    imageSrc:
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=900&auto=format&fit=crop&q=80',
+    imageSrc: '/images/services/therapieManuelle.jpg',
     items: [
       'Mobilisations articulaires',
       'Travail tissulaire',
@@ -70,8 +73,7 @@ const serviceCards: ServiceCard[] = [
     title: 'Dry needling',
     description:
       'Une technique complémentaire intégrée selon le bilan clinique, la situation du patient et les objectifs thérapeutiques',
-    imageSrc:
-      'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=900&auto=format&fit=crop&q=80',
+    imageSrc: '/images/services/dryNeedling.jpg',
     items: [
       'Trigger points',
       'Douleurs musculaires',
@@ -85,8 +87,7 @@ const serviceCards: ServiceCard[] = [
     title: 'Massage thérapeutique',
     description:
       "Un travail de récupération et de relâchement qui peut accompagner certaines phases du traitement ou de reprise de l'activité",
-    imageSrc:
-      'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=900&auto=format&fit=crop&q=80',
+    imageSrc: '/images/services/massage.jpg',
     items: [
       'Récupération',
       'Relâchement',
@@ -100,8 +101,7 @@ const serviceCards: ServiceCard[] = [
     title: 'Accompagnement personnalisé',
     description:
       'Des objectifs clairs, des conseils utiles et un suivi adapté à votre situation, du quotidien au sport',
-    imageSrc:
-      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=900&auto=format&fit=crop&q=80',
+    imageSrc: '/images/services/fitness.jpg',
     items: [
       'Conseils pratiques',
       'Progression lisible',
@@ -115,8 +115,7 @@ const serviceCards: ServiceCard[] = [
     title: 'Electrostimulation & Compex',
     description:
       'Des outils complementaires integres selon les objectifs de reeducation, de renforcement ou de recuperation.',
-    imageSrc:
-      'https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?w=900&auto=format&fit=crop&q=80',
+    imageSrc: '/images/services/compex.jpg',
     items: [
       'Activation musculaire',
       'Recuperation',
@@ -130,8 +129,7 @@ const serviceCards: ServiceCard[] = [
     title: 'Taping & kinesio-taping',
     description:
       "Un appui complementaire utile dans certaines phases de traitement, de stabilisation ou de reprise de l'activite.",
-    imageSrc:
-      'https://images.unsplash.com/photo-1544216717-3bbf52512659?w=900&auto=format&fit=crop&q=80',
+    imageSrc: '/images/services/tapping.jpg',
     items: [
       'Soutien articulaire',
       'Accompagnement fonctionnel',
@@ -161,8 +159,8 @@ const activeService = computed(() => serviceCards[activeIndex.value]!)
         <AppReveal>
           <div class="max-w-2xl">
             <AppSectionHeading
-              eyebrow="Prestations"
-              title="Des prestations choisies en fonction du bilan et des objectifs de traitement."
+              eyebrow="Expertise technique"
+              title="Une approche validée par la recherche."
               description="Le cabinet propose une physiotherapie generale et du sport appuyee sur des techniques selectionnees selon la situation clinique, les besoins du patient et la progression attendue."
             />
 

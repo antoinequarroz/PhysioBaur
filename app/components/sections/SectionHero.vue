@@ -31,8 +31,13 @@ const siteStore = useSiteStore()
                 class="mt-4 text-[2.35rem] leading-[1.02] font-semibold tracking-tight text-[var(--color-heading)] sm:mt-6 sm:text-6xl lg:text-7xl"
               >
                 PhysioBaur<br />
-                Physiothérapie à Sion
+                Votre physiothérapeute à Sion
               </h1>
+              <p
+                class="mt-3 max-w-xl text-[1.02rem] font-medium leading-7 text-[var(--color-accent)] sm:text-lg"
+              >
+                L'expertise au cœur de votre rééducation.
+              </p>
               <p
                 class="mt-5 max-w-xl text-[1rem] leading-7 text-[var(--color-text-muted)] sm:mt-6 sm:text-xl sm:leading-8"
               >
@@ -46,11 +51,19 @@ const siteStore = useSiteStore()
                 Physiothérapie générale, thérapie manuelle et physiothérapie du
                 sport à Sion, au cabinet et à domicile sur prescription.
               </p>
+              <p
+                class="mt-4 max-w-xl text-[0.98rem] leading-7 font-medium text-[var(--color-heading)] sm:text-lg sm:leading-8"
+              >
+                Votre objectif devient le nôtre. Qu'il s'agisse de reprendre
+                votre travail, retrouver une activité physique ou revenir à la
+                compétition, chaque traitement est conçu pour vous permettre
+                de retrouver confiance dans vos mouvements.
+              </p>
               <div class="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row">
                 <AppButton label="Prendre rendez-vous" href="/#contact" />
                 <AppButton
-                  label="Voir les prestations"
-                  href="/#prestations"
+                  label="Découvrir notre approche"
+                  href="/#pourquoi"
                   variant="secondary"
                 />
               </div>

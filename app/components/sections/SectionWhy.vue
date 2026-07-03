@@ -60,8 +60,8 @@ const resetTilt = () => {
 
       <AppSectionHeading
         align="center"
-        eyebrow="Pourquoi PhysioBaur"
-        title="Une physiotherapie moderne, rigoureuse et orientee resultats."
+        eyebrow="Notre philosophie"
+        title="Une pratique fondée sur les preuves, au service de votre performance."
         description="PhysioBaur s'appuie sur une approche evidence-based, l'experience clinique et le terrain pour proposer des soins serieux, actuels et adaptes a chaque situation."
       />
 
@@ -80,7 +80,7 @@ const resetTilt = () => {
               <p
                 class="relative text-[0.74rem] font-semibold uppercase tracking-[0.24em] text-[var(--color-accent)]"
               >
-                Pourquoi PhysioBaur
+                Notre philosophie
               </p>
               <h3
                 class="relative mx-auto mt-4 max-w-2xl text-[1.68rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[2.1rem] lg:text-[2.55rem]"

@@ -90,14 +90,30 @@
 
         <AppReveal :delay="120">
           <AppSectionHeading
-            eyebrow="Le thérapeute"
-            title="Un expert reconnu entre pratique clinique, enseignement et terrain sportif."
+            eyebrow="Votre thérapeute"
+            title="Un expert reconnu à votre service."
             description="Fondateur de PhysioBaur, Christophe Baur s'appuie sur plus de 15 ans d'expérience pour proposer une prise en charge exigeante, nourrie par la clinique, l'enseignement et le sport."
           />
           <div class="mt-7 flex flex-wrap gap-3 sm:mt-8">
             <AppBadge label="MSc Santé HES-SO - UNIL" />
             <AppBadge label="Head physio Suisse U19" />
             <AppBadge label="Enseignement HES-SO" />
+          </div>
+          <div
+            class="mt-5 flex items-start gap-3 rounded-[1.2rem] border border-[var(--color-border-strong)] bg-[color:color-mix(in_oklab,var(--color-surface-elevated)_72%,transparent)] px-4 py-3.5 sm:mt-6"
+          >
+            <div
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(135deg,#2563eb,#4f46e5)] text-xs font-bold text-white"
+            >
+              HES
+            </div>
+            <p class="text-sm leading-6 text-[var(--color-text-muted)]">
+              <span class="font-semibold text-[var(--color-heading)]"
+                >Formateur à la HES-SO Valais/Wallis</span
+              >
+              — implication directe dans la formation des futurs
+              physiothérapeutes en Valais.
+            </p>
           </div>
           <p
             class="mt-7 max-w-2xl text-base leading-7 text-[var(--color-text-muted)] sm:mt-8"

@@ -21,7 +21,7 @@ const domains: DomainItem[] = [
     step: 'Domaine 1',
     title: 'Rééducation musculo-squelettique',
     description:
-      'Une prise en charge structurée des troubles musculo-squelettiques pour améliorer la fonction, réduire les limitations et accompagner le retour aux activités quotidiennes ou sportives.',
+      "Votre corps, votre meilleur outil. Que vous cherchiez à retrouver une mobilité complète ou à vous remettre d'aplomb après un accident ou une opération, nous appliquons une rigueur clinique identique à celle du haut niveau pour optimiser votre qualité de mouvement au quotidien.",
     image:
       'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&auto=format&fit=crop&q=80',
     points: [
@@ -48,7 +48,7 @@ const domains: DomainItem[] = [
     step: 'Domaine 2',
     title: 'Physiothérapie du sport',
     description:
-      "Une prise en charge du sportif orientée vers la récupération, le retour progressif à l'activité et la prévention des blessures.",
+      "L'excellence pour les athlètes exigeants. Nous accompagnons les sportifs de tous niveaux, de l'amateur au professionnel, dans une démarche d'optimisation constante. Notre priorité est de repousser vos limites tout en garantissant l'intégrité de votre structure physique.",
     image:
       'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&auto=format&fit=crop&q=80',
     points: [
@@ -151,9 +151,9 @@ onBeforeUnmount(() => {
       />
 
       <AppSectionHeading
-        eyebrow="Domaines d'intervention"
+        eyebrow="Nos domaines d'expertise"
         title="Trois grands domaines structurent la prise en charge du cabinet."
-        description="PhysioBaur intervient principalement en rééducation musculo-squelettique, physiothérapie du sport et traitement à domicile sur prescription médicale."
+        description="Votre objectif devient le nôtre : chaque traitement est conçu, du terrain sportif au quotidien, avec la même exigence clinique."
         align="center"
       />
 

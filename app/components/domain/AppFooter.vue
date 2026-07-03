@@ -31,6 +31,9 @@ const navigation = [
             <p class="text-lg font-semibold text-[var(--color-heading)]">
               PhysioBaur
             </p>
+            <p class="mt-1 text-sm font-medium text-[var(--color-accent)]">
+              L'expertise au cœur de votre rééducation.
+            </p>
             <p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
               Cabinet de physiothérapie générale et du sport à Sion, avec prise
               en charge à domicile sur prescription selon la situation clinique.
