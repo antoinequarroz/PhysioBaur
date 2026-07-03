@@ -22,8 +22,7 @@ const domains: DomainItem[] = [
     title: 'Rééducation musculo-squelettique',
     description:
       "Votre corps, votre meilleur outil. Que vous cherchiez à retrouver une mobilité complète ou à vous remettre d'aplomb après un accident ou une opération, nous appliquons une rigueur clinique identique à celle du haut niveau pour optimiser votre qualité de mouvement au quotidien.",
-    image:
-      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&auto=format&fit=crop&q=80',
+    image: '/images/services/musculosqueletique.jpg',
     points: [
       {
         title: 'Prise en charge avant et après une intervention chirurgicale',
@@ -49,8 +48,7 @@ const domains: DomainItem[] = [
     title: 'Physiothérapie du sport',
     description:
       "L'excellence pour les athlètes exigeants. Nous accompagnons les sportifs de tous niveaux, de l'amateur au professionnel, dans une démarche d'optimisation constante. Notre priorité est de repousser vos limites tout en garantissant l'intégrité de votre structure physique.",
-    image:
-      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&auto=format&fit=crop&q=80',
+    image: '/images/services/physiosport2.jpg',
     points: [
       {
         title: 'Prévention des blessures',
@@ -79,8 +77,7 @@ const domains: DomainItem[] = [
       "Des traitements adaptés aux personnes âgées, à mobilité réduite, accidentées ou en situation de handicap, avec un objectif d'autonomie et de continuité des soins.",
     intro:
       'Sur prescription médicale, déplacements à domicile dans la région de Sion et Grône.',
-    image:
-      'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1200&auto=format&fit=crop&q=80',
+    image: '/images/services/domicilephysio.jpg',
     points: [
       {
         title: 'Évaluation globale',
