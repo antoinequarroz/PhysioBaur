@@ -51,7 +51,7 @@ const openMaps = () => {
           <div class="max-w-xl">
             <AppSectionHeading
               eyebrow="Contact"
-              title="Expliquez votre situation, prenons contact."
+              title="Expliquez-nous votre situation et prenez contact."
               description="Décrivez votre besoin en quelques mots — douleur, blessure, reprise sportive ou suivi général — et nous revenons vers vous rapidement pour organiser un premier rendez-vous adapté à votre situation."
             />
 
@@ -126,7 +126,7 @@ const openMaps = () => {
             <!-- OpenStreetMap Embed -->
             <div class="mb-6 h-64 w-full overflow-hidden rounded-lg">
               <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=7.354,46.226,7.364,46.234&layer=mapnik&marker=46.2297,7.3586"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=7.3675,46.2305,7.3775,46.2365&layer=mapnik&marker=46.2334943,7.3725336"
                 width="100%"
                 height="100%"
                 frameborder="0"

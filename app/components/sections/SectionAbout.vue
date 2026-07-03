@@ -69,7 +69,7 @@
                   class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
                 />
                 <p class="text-sm leading-6 text-[var(--color-text-muted)]">
-                  Formateur à la HES-SO Valais/Wallis
+                  Maître d'enseignement HES-SO Valais/Wallis
                 </p>
               </div>
             </div>
@@ -100,7 +100,7 @@
           <div class="mt-7 flex flex-wrap gap-3 sm:mt-8">
             <AppBadge label="MSc Santé HES-SO - UNIL" />
             <AppBadge label="Head physio Suisse U19" />
-            <AppBadge label="Enseignement HES-SO" />
+            <AppBadge label="Maître d'enseignement HES-SO" />
           </div>
           <div
             class="mt-5 flex items-start gap-3 rounded-[1.2rem] border border-[var(--color-border-strong)] bg-[color:color-mix(in_oklab,var(--color-surface-elevated)_72%,transparent)] px-4 py-3.5 sm:mt-6"
@@ -112,7 +112,7 @@
             </div>
             <p class="text-sm leading-6 text-[var(--color-text-muted)]">
               <span class="font-semibold text-[var(--color-heading)]"
-                >Formateur à la HES-SO Valais/Wallis</span
+                >Maître d'enseignement HES-SO Valais/Wallis</span
               >
               — implication directe dans la formation des futurs
               physiothérapeutes en Valais.
@@ -130,8 +130,8 @@
           >
             Soucieux de transmettre des pratiques solides et de rester au
             contact des preuves scientifiques, il intervient également comme
-            formateur au sein de la filière physiothérapie de la HES-SO
-            Valais/Wallis.
+            maître d'enseignement au sein de la filière physiothérapie de la
+            HES-SO Valais/Wallis.
           </p>
         </AppReveal>
       </div>
