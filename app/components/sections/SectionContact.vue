@@ -51,8 +51,8 @@ const openMaps = () => {
           <div class="max-w-xl">
             <AppSectionHeading
               eyebrow="Contact"
-              title="Expliquez votre situation et prenez contact avec le cabinet."
-              description="Un premier échange simple avec votre cabinet de physiothérapie à Sion pour comprendre votre besoin et vous orienter."
+              title="Expliquez votre situation, prenons contact."
+              description="Décrivez votre besoin en quelques mots — douleur, blessure, reprise sportive ou suivi général — et nous revenons vers vous rapidement pour organiser un premier rendez-vous adapté à votre situation."
             />
 
             <div class="mt-6 space-y-4 sm:mt-7">

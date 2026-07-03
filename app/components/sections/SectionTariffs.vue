@@ -15,6 +15,19 @@ type TariffCard = {
 
 const tariffCards: TariffCard[] = [
   {
+    eyebrow: 'Technique complémentaire',
+    title: 'Dry needling',
+    description:
+      'Intégré selon la situation clinique dans une prise en charge ciblée et adaptée au bilan.',
+    lines: [
+      {
+        label: 'Séance de dry needling',
+        duration: '30 min',
+        price: '60.-',
+      },
+    ],
+  },
+  {
     eyebrow: 'Physiothérapie',
     title: 'Physiothérapie',
     description:
@@ -30,19 +43,6 @@ const tariffCards: TariffCard[] = [
         label: 'Séance de physiothérapie',
         duration: '60 min',
         price: '120.-',
-      },
-    ],
-  },
-  {
-    eyebrow: 'Technique complémentaire',
-    title: 'Dry needling',
-    description:
-      'Intégré selon la situation clinique dans une prise en charge ciblée et adaptée au bilan.',
-    lines: [
-      {
-        label: 'Séance de dry needling',
-        duration: '30 min',
-        price: '60.-',
       },
     ],
   },
@@ -111,7 +111,7 @@ const supportBadges = [
         >
           <article
             class="relative h-full rounded-[1.45rem] p-4 sm:rounded-[1.75rem] sm:p-6 flex flex-col"
-            :class="index === 0 ? 'surface-card-accent' : 'surface-card-soft'"
+            :class="card.isPopular ? 'surface-card-accent' : 'surface-card-soft'"
           >
             <div class="flex items-start justify-between gap-3">
               <p

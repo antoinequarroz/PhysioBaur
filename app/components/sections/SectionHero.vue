@@ -54,10 +54,10 @@ const siteStore = useSiteStore()
               <p
                 class="mt-4 max-w-xl text-[0.98rem] leading-7 font-medium text-[var(--color-heading)] sm:text-lg sm:leading-8"
               >
-                Votre objectif devient le nôtre. Qu'il s'agisse de reprendre
-                votre travail, retrouver une activité physique ou revenir à la
-                compétition, chaque traitement est conçu pour vous permettre
-                de retrouver confiance dans vos mouvements.
+                Votre rééducation, votre rythme. Que l'objectif soit de
+                reprendre le travail, le sport ou la compétition, chaque étape
+                du traitement est pensée pour vous redonner confiance dans le
+                mouvement.
               </p>
               <div class="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row">
                 <AppButton label="Prendre rendez-vous" href="/#contact" />
