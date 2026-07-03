@@ -6,5 +6,8 @@
       <slot />
     </main>
     <AppFooter />
+    <ClientOnly>
+      <MobileBookingBar />
+    </ClientOnly>
   </div>
 </template>

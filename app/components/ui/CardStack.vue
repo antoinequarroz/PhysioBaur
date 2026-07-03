@@ -103,6 +103,10 @@ const updateViewport = () => {
   viewportWidth.value = window.innerWidth
 }
 
+const isHovered = ref(false)
+const isManuallyPaused = ref(false)
+const isPlaying = computed(() => !isHovered.value && !isManuallyPaused.value)
+
 const stopAutoplay = () => {
   if (autoplayId) {
     clearInterval(autoplayId)
@@ -113,7 +117,7 @@ const stopAutoplay = () => {
 const startAutoplay = () => {
   stopAutoplay()
 
-  if (!props.autoAdvance || props.items.length <= 1) {
+  if (!props.autoAdvance || props.items.length <= 1 || !isPlaying.value) {
     return
   }
 
@@ -121,6 +125,26 @@ const startAutoplay = () => {
     next()
   }, Math.max(props.intervalMs, 1700))
 }
+
+const togglePlay = () => {
+  isManuallyPaused.value = !isManuallyPaused.value
+}
+
+const handlePointerEnter = () => {
+  isHovered.value = true
+}
+
+const handlePointerLeave = () => {
+  isHovered.value = false
+}
+
+watch(isPlaying, (playing) => {
+  if (playing) {
+    startAutoplay()
+  } else {
+    stopAutoplay()
+  }
+})
 
 onMounted(() => {
   viewportWidth.value = window.innerWidth
@@ -139,7 +163,13 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="w-full">
-    <div class="relative mx-auto h-[24rem] w-full max-w-5xl overflow-hidden sm:h-[29rem] lg:h-[33rem]">
+    <div
+      class="relative mx-auto h-[24rem] w-full max-w-5xl overflow-hidden sm:h-[29rem] lg:h-[33rem]"
+      @mouseenter="handlePointerEnter"
+      @mouseleave="handlePointerLeave"
+      @focusin="handlePointerEnter"
+      @focusout="handlePointerLeave"
+    >
       <div class="pointer-events-none absolute inset-x-0 top-6 mx-auto h-48 w-[74%] rounded-full bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.22),transparent_72%)] blur-3xl" />
       <div class="pointer-events-none absolute inset-x-0 bottom-4 mx-auto h-40 w-[80%] rounded-full bg-[radial-gradient(circle_at_center,rgba(15,23,42,0.16),transparent_70%)] blur-3xl dark:bg-[radial-gradient(circle_at_center,rgba(2,6,23,0.36),transparent_70%)]" />
 
@@ -224,6 +254,17 @@ onBeforeUnmount(() => {
           @click="next"
         >
           <span class="text-lg leading-none">&rsaquo;</span>
+        </button>
+
+        <button
+          v-if="autoAdvance && items.length > 1"
+          type="button"
+          class="surface-card-soft flex h-9 w-9 items-center justify-center rounded-full text-[var(--color-heading)] sm:h-10 sm:w-10"
+          :aria-label="isManuallyPaused ? 'Reprendre le defilement automatique' : 'Mettre en pause le defilement automatique'"
+          :aria-pressed="isManuallyPaused"
+          @click="togglePlay"
+        >
+          <span class="text-sm leading-none">{{ isManuallyPaused ? '▶' : '❚❚' }}</span>
         </button>
       </div>
     </div>

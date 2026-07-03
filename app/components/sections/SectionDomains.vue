@@ -110,6 +110,10 @@ const activeIndex = ref(0)
 const activeDomain = computed(() => domains[activeIndex.value]!)
 const autoplayDelay = 5200
 
+const isHovered = ref(false)
+const isManuallyPaused = ref(false)
+const isPlaying = computed(() => !isHovered.value && !isManuallyPaused.value)
+
 const setActive = (index: number) => {
   activeIndex.value = index
 }
@@ -126,10 +130,34 @@ const stopAutoplay = () => {
 const startAutoplay = () => {
   stopAutoplay()
 
+  if (!isPlaying.value) {
+    return
+  }
+
   timerId = setInterval(() => {
     activeIndex.value = (activeIndex.value + 1) % domains.length
   }, autoplayDelay)
 }
+
+const togglePlay = () => {
+  isManuallyPaused.value = !isManuallyPaused.value
+}
+
+const handlePointerEnter = () => {
+  isHovered.value = true
+}
+
+const handlePointerLeave = () => {
+  isHovered.value = false
+}
+
+watch(isPlaying, (playing) => {
+  if (playing) {
+    startAutoplay()
+  } else {
+    stopAutoplay()
+  }
+})
 
 onMounted(() => {
   startAutoplay()
@@ -158,7 +186,13 @@ onBeforeUnmount(() => {
       />
 
       <AppReveal :delay="70">
-        <div class="mx-auto mt-8 max-w-6xl sm:mt-9">
+        <div
+          class="mx-auto mt-8 max-w-6xl sm:mt-9"
+          @mouseenter="handlePointerEnter"
+          @mouseleave="handlePointerLeave"
+          @focusin="handlePointerEnter"
+          @focusout="handlePointerLeave"
+        >
           <div
             class="grid gap-6 lg:min-h-[44rem] lg:grid-cols-[minmax(0,0.92fr)_minmax(380px,0.98fr)] lg:items-stretch lg:gap-12"
           >
@@ -257,7 +291,7 @@ onBeforeUnmount(() => {
             </Transition>
           </div>
 
-          <div class="mt-6 flex justify-center sm:mt-8">
+          <div class="mt-6 flex items-center justify-center gap-2.5 sm:mt-8">
             <ol
               class="flex w-full gap-2 overflow-x-auto px-1 pb-1 sm:flex-wrap sm:items-center sm:justify-center sm:gap-2.5 sm:px-2"
               role="list"
@@ -291,6 +325,16 @@ onBeforeUnmount(() => {
                 </button>
               </li>
             </ol>
+
+            <button
+              type="button"
+              class="surface-card-soft flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[var(--color-heading)]"
+              :aria-label="isManuallyPaused ? 'Reprendre le defilement automatique' : 'Mettre en pause le defilement automatique'"
+              :aria-pressed="isManuallyPaused"
+              @click="togglePlay"
+            >
+              <span class="text-sm leading-none">{{ isManuallyPaused ? '▶' : '❚❚' }}</span>
+            </button>
           </div>
         </div>
       </AppReveal>

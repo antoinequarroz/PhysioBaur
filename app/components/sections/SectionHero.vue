@@ -67,6 +67,26 @@ const siteStore = useSiteStore()
                   variant="secondary"
                 />
               </div>
+              <NuxtLink
+                to="/#avis"
+                class="mt-5 flex items-center gap-2 text-sm text-[var(--color-text-muted)] transition hover:text-[var(--color-heading)] sm:mt-6"
+              >
+                <span class="flex -space-x-1.5">
+                  <span
+                    v-for="initial in ['QM', 'KF', 'LL']"
+                    :key="initial"
+                    class="flex h-6 w-6 items-center justify-center rounded-full border border-[var(--color-bg)] bg-[color:color-mix(in_oklab,var(--color-accent)_18%,var(--color-surface))] text-[0.6rem] font-semibold text-[var(--color-heading)]"
+                  >
+                    {{ initial }}
+                  </span>
+                </span>
+                <span>
+                  Approuvé par des sportifs professionnels —
+                  <span class="font-medium text-[var(--color-heading)] underline underline-offset-2"
+                    >voir les avis</span
+                  >
+                </span>
+              </NuxtLink>
             </div>
           </AppReveal>
           <AppReveal :delay="120" :distance="20" :scale="0.99">
