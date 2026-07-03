@@ -225,7 +225,7 @@ onBeforeUnmount(() => {
         <button
           type="button"
           class="surface-card-soft flex h-9 w-9 items-center justify-center rounded-full text-[var(--color-heading)] sm:h-10 sm:w-10"
-          aria-label="Precedent"
+          aria-label="Précédent"
           @click="previous"
         >
           <span class="text-lg leading-none">&lsaquo;</span>
@@ -260,7 +260,7 @@ onBeforeUnmount(() => {
           v-if="autoAdvance && items.length > 1"
           type="button"
           class="surface-card-soft flex h-9 w-9 items-center justify-center rounded-full text-[var(--color-heading)] sm:h-10 sm:w-10"
-          :aria-label="isManuallyPaused ? 'Reprendre le defilement automatique' : 'Mettre en pause le defilement automatique'"
+          :aria-label="isManuallyPaused ? 'Reprendre le défilement automatique' : 'Mettre en pause le défilement automatique'"
           :aria-pressed="isManuallyPaused"
           @click="togglePlay"
         >

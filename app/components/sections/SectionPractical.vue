@@ -7,7 +7,7 @@ const infos = [
     value: siteStore.address
   },
   {
-    title: 'Telephone',
+    title: 'Téléphone',
     value: siteStore.phone
   },
   {
@@ -29,8 +29,8 @@ const infos = [
         <AppReveal>
           <AppSectionHeading
             eyebrow="Infos pratiques"
-            title="Cabinet de physiotherapie a Sion: informations pratiques et contact."
-            description="PhysioBaur vous accueille a Sion pour des prises en charge en physiotherapie generale et physiotherapie du sport, avec possibilite de traitement a domicile sur prescription dans la region de Sion et Grimisuat."
+            title="Cabinet de physiothérapie à Sion : informations pratiques et contact."
+            description="PhysioBaur vous accueille à Sion pour des prises en charge en physiothérapie générale et physiothérapie du sport, avec possibilité de traitement à domicile sur prescription dans la région de Sion et Grimisuat."
           />
         </AppReveal>
         <div class="grid gap-3 sm:gap-4 sm:grid-cols-2">

@@ -83,23 +83,23 @@ const domains: DomainItem[] = [
       'https://images.unsplash.com/photo-1576765608866-5b51046452be?w=1200&auto=format&fit=crop&q=80',
     points: [
       {
-        title: 'Evaluation globale',
+        title: 'Évaluation globale',
         text: '',
       },
       {
-        title: 'Prevention des chutes',
+        title: 'Prévention des chutes',
         text: '',
       },
       {
-        title: 'Reeducation a la marche',
+        title: 'Rééducation à la marche',
         text: '',
       },
       {
-        title: 'Reeducation musculosquelettique',
+        title: 'Rééducation musculo-squelettique',
         text: '',
       },
       {
-        title: 'Reentrainement cardiovasculaire',
+        title: 'Réentraînement cardiovasculaire',
         text: '',
       },
     ],
@@ -329,7 +329,7 @@ onBeforeUnmount(() => {
             <button
               type="button"
               class="surface-card-soft flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[var(--color-heading)]"
-              :aria-label="isManuallyPaused ? 'Reprendre le defilement automatique' : 'Mettre en pause le defilement automatique'"
+              :aria-label="isManuallyPaused ? 'Reprendre le défilement automatique' : 'Mettre en pause le défilement automatique'"
               :aria-pressed="isManuallyPaused"
               @click="togglePlay"
             >

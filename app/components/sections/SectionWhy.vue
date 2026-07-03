@@ -62,7 +62,7 @@ const resetTilt = () => {
         align="center"
         eyebrow="Notre philosophie"
         title="Une pratique fondée sur les preuves, au service de votre performance."
-        description="PhysioBaur s'appuie sur une approche evidence-based, l'experience clinique et le terrain pour proposer des soins serieux, actuels et adaptes a chaque situation."
+        description="PhysioBaur s'appuie sur une approche evidence-based, l'expérience clinique et le terrain pour proposer des soins sérieux, actuels et adaptés à chaque situation."
       />
 
       <AppReveal :delay="70">
@@ -85,15 +85,15 @@ const resetTilt = () => {
               <h3
                 class="relative mx-auto mt-4 max-w-2xl text-[1.68rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[2.1rem] lg:text-[2.55rem]"
               >
-                L'exigence therapeutique, du bilan initial au retour durable a
-                l'activite.
+                L'exigence thérapeutique, du bilan initial au retour durable à
+                l'activité.
               </h3>
               <p
                 class="relative mx-auto mt-4 max-w-2xl text-[0.97rem] leading-7 text-[var(--color-text-muted)] sm:text-[1rem] sm:leading-8"
               >
-                Le cabinet associe physiotherapie generale et physiotherapie du
-                sport avec une meme exigence: proposer des soins fiables,
-                personnalises et appuyes par les meilleures pratiques actuelles.
+                Le cabinet associe physiothérapie générale et physiothérapie du
+                sport avec une même exigence : proposer des soins fiables,
+                personnalisés et appuyés par les meilleures pratiques actuelles.
               </p>
             </div>
 

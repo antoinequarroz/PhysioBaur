@@ -10,13 +10,13 @@ const featuredTestimonials: TestimonialItem[] = [
     name: 'Quentin Maceiras',
     role: 'Footballeur professionnel',
     quote:
-      "L'accueil, le professionnalisme et la qualite des soins sont au top. Je recommande fortement.",
+      "L'accueil, le professionnalisme et la qualité des soins sont au top. Je recommande fortement.",
   },
   {
     name: 'Kevin Fickentscher',
     role: 'Ex-footballeur professionnel',
     quote:
-      "Excellent cabinet, en plus d'une prise en charge optimale grace a un physiotherapeute de renom.",
+      "Excellent cabinet, en plus d'une prise en charge optimale grâce à un physiothérapeute de renom.",
   },
   {
     name: 'Anton Mitryushkin',
@@ -27,18 +27,18 @@ const featuredTestimonials: TestimonialItem[] = [
     name: 'Arnaud Boisset',
     role: 'Skieur professionnel',
     quote:
-      "Therapeute professionnel et toujours souriant. J'ai particulierement aime son empathie. Je recommande.",
+      "Thérapeute professionnel et toujours souriant. J'ai particulièrement aimé son empathie. Je recommande.",
   },
   {
-    name: 'Leo Lacroix',
+    name: 'Léo Lacroix',
     role: 'Footballeur professionnel',
     quote:
-      "Avant d'etre un physio, c'est un homme toujours a l'ecoute, disponible et engage.",
+      "Avant d'être un physio, c'est un homme toujours à l'écoute, disponible et engagé.",
   },
   {
-    name: 'Theo Magnin',
+    name: 'Théo Magnin',
     role: 'Footballeur professionnel',
-    quote: 'Excellent physio, tres competent et bon vivant.',
+    quote: 'Excellent physio, très compétent et bon vivant.',
   },
   {
     name: 'Tom Richard',
@@ -52,10 +52,10 @@ const secondColumn = featuredTestimonials.slice(2, 5)
 const thirdColumn = featuredTestimonials.slice(4, 7)
 
 const trustNames = [
-  'Jeremie Heitz',
+  'Jérémie Heitz',
   'Yvon Mvogo',
   'Sybille Blanjean',
-  'Aurele Amenda',
+  'Aurèle Amenda',
   'Dereck Kutesa',
 ]
 </script>
@@ -72,7 +72,7 @@ const trustNames = [
       <AppSectionHeading
         eyebrow="Avis"
         title="Ils nous ont fait confiance."
-        description="Sportifs professionnels, patients en reeducation ou personnes en quete d'un suivi de qualite - ils ont tous fait confiance au cabinet PhysioBaur."
+        description="Sportifs professionnels, patients en rééducation ou personnes en quête d'un suivi de qualité - ils ont tous fait confiance au cabinet PhysioBaur."
         align="center"
       />
 

@@ -16,14 +16,14 @@ const serviceCards: ServiceCard[] = [
     imageSrc:
       'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&auto=format&fit=crop&q=80',
     items: [
-      'Evaluation sportive',
+      'Évaluation sportive',
       'Rééducation',
       'Différents concepts de thérapie manuelle (SAMT, Maitland, Cyriax, Sohier, …)',
       'Renforcement musculaire',
       'Proprioception',
       'Drainage lymphatique manuel',
       'Massage',
-      'Electrothérapie (Compex, Teecar, …)',
+      'Électrothérapie (Compex, Teecar, …)',
       'Crochetage myo-fasciaux',
       'Flossing therapy (Blood Flow Restriction)',
       'Taping & Kinesio-Taping',
@@ -42,7 +42,7 @@ const serviceCards: ServiceCard[] = [
       'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=900&auto=format&fit=crop&q=80',
     items: [
       'Prise en charge de sportifs amateurs et professionnels',
-      'Evaluation sportive',
+      'Évaluation sportive',
       'Rééducation',
       'Massage',
       'Trigger point',
@@ -50,7 +50,7 @@ const serviceCards: ServiceCard[] = [
       'Proprioception',
       'Renforcement musculaire',
       'Flossing therapy (Blood Flow Restriction)',
-      'Electrostimulation, Compex',
+      'Électrostimulation, Compex',
     ],
   },
   {
@@ -92,7 +92,7 @@ const serviceCards: ServiceCard[] = [
       'Récupération',
       'Relâchement',
       'Accompagnement du soin',
-      'Soutien au retour à l activité',
+      "Soutien au retour à l'activité",
     ],
   },
   {
@@ -112,15 +112,15 @@ const serviceCards: ServiceCard[] = [
   {
     id: 'electrostimulation',
     tag: 'Outils',
-    title: 'Electrostimulation & Compex',
+    title: 'Électrostimulation & Compex',
     description:
-      'Des outils complementaires integres selon les objectifs de reeducation, de renforcement ou de recuperation.',
+      'Des outils complémentaires intégrés selon les objectifs de rééducation, de renforcement ou de récupération.',
     imageSrc: '/images/services/compex.jpg',
     items: [
       'Activation musculaire',
-      'Recuperation',
-      'Complement au renforcement',
-      'Integration au plan de traitement',
+      'Récupération',
+      'Complément au renforcement',
+      'Intégration au plan de traitement',
     ],
   },
   {
@@ -128,13 +128,13 @@ const serviceCards: ServiceCard[] = [
     tag: 'Support',
     title: 'Taping & kinesio-taping',
     description:
-      "Un appui complementaire utile dans certaines phases de traitement, de stabilisation ou de reprise de l'activite.",
+      "Un appui complémentaire utile dans certaines phases de traitement, de stabilisation ou de reprise de l'activité.",
     imageSrc: '/images/services/tapping.jpg',
     items: [
       'Soutien articulaire',
       'Accompagnement fonctionnel',
-      'Retour progressif a l activite',
-      'Integration a la prise en charge globale',
+      "Retour progressif à l'activité",
+      'Intégration à la prise en charge globale',
     ],
   },
 ]
@@ -161,7 +161,7 @@ const activeService = computed(() => serviceCards[activeIndex.value]!)
             <AppSectionHeading
               eyebrow="Expertise technique"
               title="Une approche validée par la recherche."
-              description="Le cabinet propose une physiotherapie generale et du sport appuyee sur des techniques selectionnees selon la situation clinique, les besoins du patient et la progression attendue."
+              description="Le cabinet propose une physiothérapie générale et du sport appuyée sur des techniques sélectionnées selon la situation clinique, les besoins du patient et la progression attendue."
             />
 
             <div

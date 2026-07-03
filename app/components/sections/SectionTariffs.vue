@@ -113,22 +113,18 @@ const supportBadges = [
             class="relative h-full rounded-[1.45rem] p-4 sm:rounded-[1.75rem] sm:p-6 flex flex-col"
             :class="index === 0 ? 'surface-card-accent' : 'surface-card-soft'"
           >
-            <div
-              v-if="index === 0"
-              class="pointer-events-none absolute inset-x-10 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(96,165,250,0.7),transparent)]"
-            />
-
             <div class="flex items-start justify-between gap-3">
               <p
                 class="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]"
               >
                 {{ card.eyebrow }}
               </p>
-              <AppBadge
+              <span
                 v-if="card.isPopular"
-                label="Populaire"
-                class="flex-shrink-0 !bg-[var(--color-accent)] !text-white"
-              />
+                class="flex-shrink-0 rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-[0_6px_18px_rgba(37,99,235,0.45)]"
+              >
+                Populaire
+              </span>
             </div>
             <h3
               class="mt-3 text-[1.35rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[1.65rem]"

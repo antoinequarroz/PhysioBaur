@@ -94,7 +94,7 @@ const keyFacts = [
               <p
                 class="mt-3 text-[1.15rem] font-semibold leading-7 text-[var(--color-heading)] sm:mt-4 sm:text-xl sm:leading-8"
               >
-                Une organisation simple, un cadre serieux et une prise en charge
+                Une organisation simple, un cadre sérieux et une prise en charge
                 suivie dans le temps.
               </p>
               <p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">

@@ -2,7 +2,7 @@
 const specialties = [
   { key: 'musculo', label: 'Musculo-squelettique' },
   { key: 'sport', label: 'Physio du sport' },
-  { key: 'home', label: 'A domicile sur prescription' }
+  { key: 'home', label: 'À domicile sur prescription' }
 ]
 </script>
 
@@ -21,7 +21,7 @@ const specialties = [
           </div>
           <div class="min-w-0">
             <p class="text-base font-semibold text-[var(--color-heading)] sm:text-lg">Christophe Baur</p>
-            <p class="mt-0.5 text-sm text-[var(--color-text-muted)]">Physiotherapeute MSc</p>
+            <p class="mt-0.5 text-sm text-[var(--color-text-muted)]">Physiothérapeute MSc</p>
           </div>
         </div>
 
@@ -56,7 +56,7 @@ const specialties = [
 
       <div class="border-t border-[var(--color-border-strong)] pt-3 sm:pt-4">
         <p class="text-sm leading-6 text-[var(--color-text-muted)]">
-          Rembourse par <span class="font-semibold text-[var(--color-heading)]">LAMal et LAA</span> sur prescription
+          Remboursé par <span class="font-semibold text-[var(--color-heading)]">LAMal et LAA</span> sur prescription
         </p>
       </div>
     </div>

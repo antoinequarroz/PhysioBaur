@@ -10,7 +10,7 @@ const sponsors = [
   {
     id: 'sportfisio',
     label: 'Sportfisio',
-    subtitle: 'Reseau sport',
+    subtitle: 'Réseau sport',
     image: '/sponsors/sportfisio.png',
     imageClassName: 'h-10 w-auto max-w-[10rem] object-contain'
   },
@@ -33,7 +33,7 @@ const sponsors = [
       <AppSectionHeading
         eyebrow="Affiliations et partenaires"
         title="Les affiliations visibles du cabinet."
-        description="Christophe Baur est membre affilie a PhysioSwiss, au reseau SportFisio et partenaire de l Association Suisse de Football."
+        description="Christophe Baur est membre affilié à PhysioSwiss, au réseau SportFisio et partenaire de l'Association Suisse de Football."
         align="center"
       />
 

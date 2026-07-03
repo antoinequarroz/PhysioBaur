@@ -1,17 +1,21 @@
 <script setup lang="ts">
 const siteStore = useSiteStore()
 
-const navigation = [
-  { label: 'Pourquoi', to: '/#pourquoi' },
+const cabinetLinks = [
   { label: 'Thérapeute', to: '/#a-propos' },
   { label: 'Domaines', to: '/#domaines' },
   { label: 'Prestations', to: '/#prestations' },
   { label: 'Tarifs', to: '/#tarifs' },
-  { label: 'Avis', to: '/#avis' },
-  { label: 'Infos', to: '/#infos' },
-  { label: 'Contact', to: '/#contact' },
-  { label: 'Mentions légales', to: '/mentions-legales' },
 ]
+
+const infoLinks = [
+  { label: 'Pourquoi PhysioBaur', to: '/#pourquoi' },
+  { label: 'Avis', to: '/#avis' },
+  { label: 'Infos pratiques', to: '/#infos' },
+  { label: 'Contact', to: '/#contact' },
+]
+
+const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteStore.address)}`
 </script>
 
 <template>
@@ -25,9 +29,9 @@ const navigation = [
       />
       <div class="border-t border-[var(--color-border-strong)] pt-6 sm:pt-9">
         <div
-          class="grid gap-7 sm:gap-8 lg:grid-cols-[1.1fr_0.75fr_0.9fr] lg:gap-12"
+          class="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-9 lg:grid-cols-[1.15fr_0.7fr_0.7fr_0.95fr] lg:gap-8"
         >
-          <div class="max-w-md">
+          <div class="max-w-md sm:col-span-2 lg:col-span-1">
             <p class="text-lg font-semibold text-[var(--color-heading)]">
               PhysioBaur
             </p>
@@ -38,17 +42,40 @@ const navigation = [
               Cabinet de physiothérapie générale et du sport à Sion, avec prise
               en charge à domicile sur prescription selon la situation clinique.
             </p>
+            <AppButton
+              label="Prendre rendez-vous"
+              href="/#contact"
+              class="mt-5"
+            />
           </div>
 
           <div>
             <p
               class="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[var(--color-text-muted)]"
             >
-              Navigation
+              Le cabinet
             </p>
             <div class="mt-3 space-y-2.5 sm:mt-4 sm:space-y-3">
               <NuxtLink
-                v-for="item in navigation"
+                v-for="item in cabinetLinks"
+                :key="item.to"
+                :to="item.to"
+                class="block text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-heading)]"
+              >
+                {{ item.label }}
+              </NuxtLink>
+            </div>
+          </div>
+
+          <div>
+            <p
+              class="text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[var(--color-text-muted)]"
+            >
+              Informations
+            </p>
+            <div class="mt-3 space-y-2.5 sm:mt-4 sm:space-y-3">
+              <NuxtLink
+                v-for="item in infoLinks"
                 :key="item.to"
                 :to="item.to"
                 class="block text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-heading)]"
@@ -67,7 +94,14 @@ const navigation = [
             <div
               class="mt-3 space-y-2.5 text-sm text-[var(--color-text-muted)] sm:mt-4 sm:space-y-3"
             >
-              <p>{{ siteStore.address }}</p>
+              <a
+                :href="mapsHref"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block transition-colors hover:text-[var(--color-heading)]"
+              >
+                {{ siteStore.address }}
+              </a>
               <a
                 :href="`tel:${siteStore.phone.replaceAll(' ', '')}`"
                 class="block transition-colors hover:text-[var(--color-heading)]"
@@ -91,7 +125,15 @@ const navigation = [
             &copy; {{ new Date().getFullYear() }} PhysioBaur. Tous droits
             réservés.
           </p>
-          <p>Sion, Valais</p>
+          <div class="flex items-center gap-4">
+            <NuxtLink
+              to="/mentions-legales"
+              class="transition-colors hover:text-[var(--color-heading)]"
+            >
+              Mentions légales
+            </NuxtLink>
+            <p>Sion, Valais</p>
+          </div>
         </div>
       </div>
     </AppContainer>

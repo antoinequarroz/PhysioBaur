@@ -12,19 +12,22 @@
       >
         <AppReveal :distance="24">
           <div class="space-y-5">
-            <div class="flex items-center gap-4">
+            <div
+              class="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-[1.75rem] shadow-[0_20px_50px_rgba(15,23,42,0.16)]"
+            >
+              <img
+                src="/images/PhotoBaur.jpeg"
+                alt="Christophe Baur, physiothérapeute, sur un terrain avec l'équipe nationale Suisse"
+                class="h-full w-full object-cover object-top"
+                loading="lazy"
+              />
               <div
-                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.9rem] bg-[linear-gradient(135deg,#2563eb,#4f46e5)] text-base font-bold text-white shadow-[0_6px_16px_rgba(37,99,235,0.28)]"
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent p-4"
               >
-                CB
-              </div>
-              <div>
-                <p class="font-semibold text-[var(--color-heading)]">
+                <p class="text-sm font-semibold text-white">
                   Christophe Baur
                 </p>
-                <p class="text-sm text-[var(--color-text-muted)]">
-                  Physiothérapeute MSc
-                </p>
+                <p class="text-xs text-white/80">Physiothérapeute MSc</p>
               </div>
             </div>
 
@@ -46,7 +49,7 @@
                   class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
                 />
                 <p class="text-sm leading-6 text-[var(--color-text-muted)]">
-                  MSc Sante - HES-SO / UNIL
+                  MSc Santé - HES-SO / UNIL
                 </p>
               </div>
               <div

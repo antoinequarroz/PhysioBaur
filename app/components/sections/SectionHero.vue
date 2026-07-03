@@ -25,7 +25,7 @@ const siteStore = useSiteStore()
           <AppReveal :distance="20">
             <div class="mx-auto max-w-2xl lg:mx-0">
               <AppBadge
-                label="Christophe Baur - cabinet de physiotherapie a Sion"
+                label="Christophe Baur - cabinet de physiothérapie à Sion"
               />
               <h1
                 class="mt-4 text-[2.35rem] leading-[1.02] font-semibold tracking-tight text-[var(--color-heading)] sm:mt-6 sm:text-6xl lg:text-7xl"
@@ -71,7 +71,7 @@ const siteStore = useSiteStore()
                 to="/#avis"
                 class="mt-5 flex items-center gap-2 text-sm text-[var(--color-text-muted)] transition hover:text-[var(--color-heading)] sm:mt-6"
               >
-                <span class="flex -space-x-1.5">
+                <span class="flex shrink-0 -space-x-1.5">
                   <span
                     v-for="initial in ['QM', 'KF', 'LL']"
                     :key="initial"
@@ -80,7 +80,7 @@ const siteStore = useSiteStore()
                     {{ initial }}
                   </span>
                 </span>
-                <span>
+                <span class="min-w-0">
                   Approuvé par des sportifs professionnels —
                   <span class="font-medium text-[var(--color-heading)] underline underline-offset-2"
                     >voir les avis</span
