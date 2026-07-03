@@ -52,7 +52,7 @@ const domains: DomainItem[] = [
     points: [
       {
         title: 'Prévention des blessures',
-        text: 'Analyse des antécédents, du mouvement et des facteurs de risque pour prévenir les blessures sportives.',
+        text: 'Un bilan complet du mouvement et des antécédents pour identifier les facteurs de risque et anticiper la blessure.',
       },
       {
         title: 'Réentraînement',
@@ -76,7 +76,7 @@ const domains: DomainItem[] = [
     description:
       "Des traitements adaptés aux personnes âgées, à mobilité réduite, accidentées ou en situation de handicap, avec un objectif d'autonomie et de continuité des soins.",
     intro:
-      'Sur prescription médicale, déplacements à domicile dans la région de Sion et Grône.',
+      'Sur prescription médicale, déplacements à domicile dans la région de Sion et Grimisuat.',
     image: '/images/services/domicilephysio.jpg',
     points: [
       {
@@ -177,7 +177,7 @@ onBeforeUnmount(() => {
 
       <AppSectionHeading
         eyebrow="Nos domaines d'expertise"
-        title="Trois grands domaines structurent la prise en charge du cabinet."
+        title="Trois grands domaines structurent la prise en charge du cabinet"
         description="Votre objectif devient le nôtre : chaque traitement est conçu, du terrain sportif au quotidien, avec la même exigence clinique."
         align="center"
       />

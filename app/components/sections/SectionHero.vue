@@ -129,7 +129,7 @@ const siteStore = useSiteStore()
               class="mt-4 text-[1.9rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[2.25rem] lg:text-[2.7rem]"
             >
               Des soins structurés, du bilan initial au retour progressif à
-              l'activité.
+              l'activité
             </h2>
             <p
               class="mx-auto mt-4 max-w-2xl text-[0.98rem] leading-7 text-[var(--color-text-muted)] sm:text-[1.04rem] sm:leading-8"
@@ -212,8 +212,8 @@ const siteStore = useSiteStore()
                 Plus de 15 ans d'expérience clinique
               </p>
               <p class="mt-2 text-sm leading-6 text-[var(--color-text-muted)]">
-                Une pratique liée à la clinique, à l'enseignement et au terrain
-                sportif.
+                Une pratique orientée clinique, basée sur l'évidence et
+                l'expertise de terrain.
               </p>
             </div>
           </div>

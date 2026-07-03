@@ -61,7 +61,7 @@ const resetTilt = () => {
       <AppSectionHeading
         align="center"
         eyebrow="Notre philosophie"
-        title="Une pratique fondée sur les preuves, au service de votre performance."
+        title="Une pratique fondée sur les preuves, au service de votre performance"
         description="PhysioBaur s'appuie sur une approche evidence-based, l'expérience clinique et le terrain pour proposer des soins sérieux, actuels et adaptés à chaque situation."
       />
 
@@ -86,7 +86,7 @@ const resetTilt = () => {
                 class="relative mx-auto mt-4 max-w-2xl text-[1.68rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-[2.1rem] lg:text-[2.55rem]"
               >
                 L'exigence thérapeutique, du bilan initial au retour durable à
-                l'activité.
+                l'activité
               </h3>
               <p
                 class="relative mx-auto mt-4 max-w-2xl text-[0.97rem] leading-7 text-[var(--color-text-muted)] sm:text-[1rem] sm:leading-8"

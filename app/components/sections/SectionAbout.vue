@@ -59,7 +59,7 @@
                   class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
                 />
                 <p class="text-sm leading-6 text-[var(--color-text-muted)]">
-                  Head physio - Equipe nationale Suisse U19
+                  Head physio - Équipe nationale Suisse de Football U19
                 </p>
               </div>
               <div
@@ -94,7 +94,7 @@
         <AppReveal :delay="120">
           <AppSectionHeading
             eyebrow="Votre thérapeute"
-            title="Un expert reconnu à votre service."
+            title="Un expert reconnu à votre service"
             description="Fondateur de PhysioBaur, Christophe Baur s'appuie sur plus de 15 ans d'expérience pour proposer une prise en charge exigeante, nourrie par la clinique, l'enseignement et le sport."
           />
           <div class="mt-7 flex flex-wrap gap-3 sm:mt-8">

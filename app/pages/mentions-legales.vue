@@ -23,7 +23,7 @@ useSeoMeta({
           </p>
           <p>
             Téléphone : 078 760 33 68. E-mail de contact affiché sur ce MVP :
-            contact@physiobaur.ch.
+            info@physiobaur.ch.
           </p>
           <p>
             Les informations légales définitives, y compris les données

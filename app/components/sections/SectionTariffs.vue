@@ -50,7 +50,7 @@ const tariffCards: TariffCard[] = [
     eyebrow: 'Récupération',
     title: 'Massage',
     description:
-      'Approche complémentaire pour relâcher, récupérer et accompagner certaines phases de traitement',
+      'Détente musculaire et récupération, en complément du suivi thérapeutique.',
     lines: [
       {
         label: 'Massage',
@@ -84,7 +84,7 @@ const supportBadges = [
 
       <AppSectionHeading
         eyebrow="Tarifs"
-        title="Des tarifs clairs et une prise en charge transparente."
+        title="Des tarifs clairs et une prise en charge transparente"
         description="En Suisse, la physiothérapie est prise en charge par l'assurance maladie de base (LAMal) et l'assurance accident (LAA), sous certaines conditions. Une prescription médicale est nécessaire et couvre généralement jusqu’à 9 séances par prescription."
         align="center"
       />

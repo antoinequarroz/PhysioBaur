@@ -1,6 +1,6 @@
 export const useSiteStore = defineStore('site', () => {
   const phone = '078 760 33 68'
-  const email = 'contact@physiobaur.ch'
+  const email = 'info@physiobaur.ch'
   const address = 'Rue du Stade 4, 1950 Sion, Valais'
   const heroBadges = [
     'Physiothérapie générale',

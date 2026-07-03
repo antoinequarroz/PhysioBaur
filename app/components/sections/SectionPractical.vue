@@ -29,7 +29,7 @@ const infos = [
         <AppReveal>
           <AppSectionHeading
             eyebrow="Infos pratiques"
-            title="Cabinet de physiothérapie à Sion : informations pratiques et contact."
+            title="Cabinet de physiothérapie à Sion : informations pratiques et contact"
             description="PhysioBaur vous accueille à Sion pour des prises en charge en physiothérapie générale et physiothérapie du sport, avec possibilité de traitement à domicile sur prescription dans la région de Sion et Grimisuat."
           />
         </AppReveal>

@@ -22,7 +22,7 @@ const contactItems = [
 ]
 
 const copyEmail = () => {
-  navigator.clipboard.writeText('contact@physiobaur.ch')
+  navigator.clipboard.writeText(siteStore.email)
 }
 
 const callNow = () => {
@@ -35,6 +35,21 @@ const openMaps = () => {
     '_blank',
   )
 }
+
+// Pre-computed OpenStreetMap raster tiles (zoom 16) covering Rue du Stade 4,
+// 1950 Sion, so the marker can be styled in the site's accent color instead
+// of relying on the embed's non-customizable default pin.
+const mapTiles = [
+  { x: 34108, y: 23253, left: -35.1513, top: -20.7077 },
+  { x: 34109, y: 23253, left: 4.8487, top: -20.7077 },
+  { x: 34110, y: 23253, left: 44.8487, top: -20.7077 },
+  { x: 34111, y: 23253, left: 84.8487, top: -20.7077 },
+  { x: 34108, y: 23254, left: -35.1513, top: 59.2923 },
+  { x: 34109, y: 23254, left: 4.8487, top: 59.2923 },
+  { x: 34110, y: 23254, left: 44.8487, top: 59.2923 },
+  { x: 34111, y: 23254, left: 84.8487, top: 59.2923 },
+]
+const mapZoom = 16
 </script>
 
 <template>
@@ -123,18 +138,34 @@ const openMaps = () => {
           <div
             class="rounded-[1.35rem] surface-card-soft p-4 sm:rounded-[1.65rem] sm:p-7"
           >
-            <!-- OpenStreetMap Embed -->
-            <div class="mb-6 h-64 w-full overflow-hidden rounded-lg">
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=7.3675,46.2305,7.3775,46.2365&layer=mapnik&marker=46.2334943,7.3725336"
-                width="100%"
-                height="100%"
-                frameborder="0"
-                style="border: 0"
-                allowfullscreen
+            <!-- OpenStreetMap tiles with a custom accent-colored marker -->
+            <a
+              :href="`https://www.openstreetmap.org/?mlat=46.2334943&mlon=7.3725336#map=17/46.2334943/7.3725336`"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="relative mb-6 block h-64 w-full overflow-hidden rounded-lg bg-[var(--color-surface)]"
+              aria-label="Ouvrir la carte du cabinet sur OpenStreetMap"
+            >
+              <img
+                v-for="tile in mapTiles"
+                :key="`${tile.x}-${tile.y}`"
+                :src="`https://tile.openstreetmap.org/${mapZoom}/${tile.x}/${tile.y}.png`"
+                alt=""
+                class="absolute h-[80%] w-[40%]"
+                :style="{ left: `${tile.left}%`, top: `${tile.top}%` }"
                 loading="lazy"
+                draggable="false"
               />
-            </div>
+              <svg
+                class="absolute left-1/2 top-1/2 h-9 w-9 -translate-x-1/2 -translate-y-full text-[var(--color-accent)] drop-shadow-[0_4px_6px_rgba(15,23,42,0.35)]"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C7.03 0 3 4.03 3 9c0 6.75 9 15 9 15s9-8.25 9-15c0-4.97-4.03-9-9-9Zm0 12.5A3.5 3.5 0 1 1 12 5.5a3.5 3.5 0 0 1 0 7Z"
+                />
+              </svg>
+            </a>
             <ContactForm />
           </div>
         </AppReveal>

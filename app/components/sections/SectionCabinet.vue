@@ -38,7 +38,7 @@ const keyFacts = [
           <div class="max-w-2xl">
             <AppSectionHeading
               eyebrow="Cabinet"
-              title="Un cabinet de physiothérapie à Sion, structuré autour de l'exigence thérapeutique."
+              title="Un cabinet de physiothérapie à Sion, structuré autour de l'exigence thérapeutique"
               description="PhysioBaur propose une prise en charge rigoureuse en physiothérapie générale et du sport, avec un cadre clair, des objectifs lisibles et un suivi adapté à la réalité de chaque patient."
             />
 

@@ -71,7 +71,7 @@ const trustNames = [
       />
       <AppSectionHeading
         eyebrow="Avis"
-        title="Ils nous ont fait confiance."
+        title="Ils nous ont fait confiance"
         description="Sportifs professionnels, patients en rééducation ou personnes en quête d'un suivi de qualité - ils ont tous fait confiance au cabinet PhysioBaur."
         align="center"
       />

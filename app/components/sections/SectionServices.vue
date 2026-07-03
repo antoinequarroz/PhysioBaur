@@ -160,7 +160,7 @@ const activeService = computed(() => serviceCards[activeIndex.value]!)
           <div class="max-w-2xl">
             <AppSectionHeading
               eyebrow="Expertise technique"
-              title="Une approche validée par la recherche."
+              title="Une approche validée par la recherche"
               description="Le cabinet propose une physiothérapie générale et du sport appuyée sur des techniques sélectionnées selon la situation clinique, les besoins du patient et la progression attendue."
             />
 

@@ -32,7 +32,7 @@ const sponsors = [
 
       <AppSectionHeading
         eyebrow="Affiliations et partenaires"
-        title="Les affiliations visibles du cabinet."
+        title="Les affiliations visibles du cabinet"
         description="Christophe Baur est membre affilié à PhysioSwiss, au réseau SportFisio et partenaire de l'Association Suisse de Football."
         align="center"
       />

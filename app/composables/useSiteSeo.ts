@@ -50,7 +50,7 @@ export const useSiteSeo = () => {
             longitude: 7.3667
           },
           telephone: '+41 78 760 33 68',
-          email: 'contact@physiobaur.ch',
+          email: 'info@physiobaur.ch',
           url: siteUrl,
           priceRange: '$$'
         })
