@@ -83,9 +83,9 @@ const siteStore = useSiteStore()
               </NuxtLink>
             </div>
           </AppReveal>
-          <AppReveal :delay="120" :distance="20" :scale="0.99">
+          <AppReveal :delay="120" :distance="20" :scale="0.99" class="hidden lg:block">
             <div
-              class="relative flex w-full justify-center min-[320px]:mt-1 lg:mt-0 lg:min-h-[min(70svh,780px)] lg:items-center"
+              class="relative flex w-full justify-center lg:mt-0 lg:min-h-[min(70svh,780px)] lg:items-center"
             >
               <div
                 class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_58%_45%,rgba(59,130,246,0.16),transparent_46%),radial-gradient(circle_at_72%_58%,rgba(99,102,241,0.12),transparent_34%)] blur-2xl"
