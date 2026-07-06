@@ -9,9 +9,15 @@ type ContactPayload = {
 
 declare global {
   interface Window {
-    onTurnstileSuccess?: (token: string) => void
-    onTurnstileExpired?: () => void
     turnstile?: {
+      render: (
+        container: HTMLElement,
+        options: {
+          sitekey: string
+          callback: (token: string) => void
+          'expired-callback'?: () => void
+        }
+      ) => string
       reset: (widgetId?: string) => void
     }
   }
@@ -19,30 +25,64 @@ declare global {
 
 const config = useRuntimeConfig()
 const turnstileToken = ref('')
+const turnstileError = ref('')
 const company = ref('')
+const turnstileContainer = ref<HTMLDivElement | null>(null)
+let turnstileWidgetId: string | undefined
 
-useHead({
-  script: [
-    {
-      src: 'https://challenges.cloudflare.com/turnstile/v0/api.js',
-      async: true,
-      defer: true,
+const isScriptReady = ref(false)
+
+const tryRenderTurnstile = () => {
+  if (turnstileWidgetId || !isScriptReady.value || !turnstileContainer.value) {
+    return
+  }
+
+  if (!config.public.turnstileSiteKey) {
+    turnstileError.value =
+      "Le contrôle de sécurité n'est pas configuré (clé Turnstile manquante)."
+    return
+  }
+
+  if (!window.turnstile) {
+    turnstileError.value = "Le contrôle de sécurité n'a pas pu se charger."
+    return
+  }
+
+  turnstileWidgetId = window.turnstile.render(turnstileContainer.value, {
+    sitekey: config.public.turnstileSiteKey,
+    callback: (token) => {
+      turnstileToken.value = token
     },
-  ],
-})
+    'expired-callback': () => {
+      turnstileToken.value = ''
+    },
+  })
+}
+
+// The Turnstile widget lives inside <ClientOnly>, which mounts its slot one
+// tick after this component's own onMounted, so the container ref may not
+// be set yet — watch it instead of assuming it's ready right away.
+watch(turnstileContainer, tryRenderTurnstile)
 
 onMounted(() => {
-  window.onTurnstileSuccess = (token: string) => {
-    turnstileToken.value = token
+  if (window.turnstile) {
+    isScriptReady.value = true
+    tryRenderTurnstile()
+    return
   }
-  window.onTurnstileExpired = () => {
-    turnstileToken.value = ''
-  }
-})
 
-onBeforeUnmount(() => {
-  window.onTurnstileSuccess = undefined
-  window.onTurnstileExpired = undefined
+  const script = document.createElement('script')
+  script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
+  script.async = true
+  script.defer = true
+  script.onload = () => {
+    isScriptReady.value = true
+    tryRenderTurnstile()
+  }
+  script.onerror = () => {
+    turnstileError.value = "Le contrôle de sécurité n'a pas pu se charger."
+  }
+  document.head.appendChild(script)
 })
 
 const form = reactive<ContactPayload>({
@@ -139,7 +179,7 @@ const submitForm = async () => {
       message: '',
     })
     turnstileToken.value = ''
-    window.turnstile?.reset()
+    window.turnstile?.reset(turnstileWidgetId)
   } catch {
     status.value = 'error'
     feedback.value = "Une erreur est survenue. Merci d'essayer à nouveau."
@@ -252,12 +292,13 @@ const submitForm = async () => {
     />
 
     <ClientOnly>
-      <div
-        class="cf-turnstile"
-        :data-sitekey="config.public.turnstileSiteKey"
-        data-callback="onTurnstileSuccess"
-        data-expired-callback="onTurnstileExpired"
-      />
+      <div ref="turnstileContainer" />
+      <p
+        v-if="turnstileError"
+        class="text-xs text-rose-600 dark:text-rose-400"
+      >
+        {{ turnstileError }}
+      </p>
     </ClientOnly>
 
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
