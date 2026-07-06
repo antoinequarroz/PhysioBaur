@@ -326,11 +326,17 @@ onBeforeUnmount(() => {
             <button
               type="button"
               class="surface-card-soft flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[var(--color-heading)]"
-              :aria-label="isManuallyPaused ? 'Reprendre le défilement automatique' : 'Mettre en pause le défilement automatique'"
+              :aria-label="
+                isManuallyPaused
+                  ? 'Reprendre le défilement automatique'
+                  : 'Mettre en pause le défilement automatique'
+              "
               :aria-pressed="isManuallyPaused"
               @click="togglePlay"
             >
-              <span class="text-sm leading-none">{{ isManuallyPaused ? '▶' : '❚❚' }}</span>
+              <span class="text-sm leading-none">{{
+                isManuallyPaused ? '▶' : '❚❚'
+              }}</span>
             </button>
           </div>
         </div>
