@@ -318,7 +318,7 @@ onBeforeUnmount(() => {
                   >
                     {{ index + 1 }}
                   </span>
-                  <span>{{ domain.title }}</span>
+                  <span class="hidden sm:inline">{{ domain.title }}</span>
                 </button>
               </li>
             </ol>

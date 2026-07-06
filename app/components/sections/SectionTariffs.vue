@@ -163,7 +163,7 @@ const supportBadges = [
                 </div>
               </div>
             </div>
-            <div class="mt-6 flex-grow flex items-end">
+            <div class="mt-6 hidden flex-grow items-end lg:flex">
               <AppButton
                 label="Prendre rendez-vous"
                 href="/#contact"
@@ -173,6 +173,16 @@ const supportBadges = [
           </article>
         </AppReveal>
       </div>
+
+      <AppReveal :delay="150">
+        <div class="mx-auto mt-6 max-w-xs sm:max-w-sm lg:hidden">
+          <AppButton
+            label="Prendre rendez-vous"
+            href="/#contact"
+            class="w-full"
+          />
+        </div>
+      </AppReveal>
 
       <AppReveal :delay="180">
         <div

@@ -16,6 +16,14 @@ const isOpen = ref(false)
 const closeMenu = () => {
   isOpen.value = false
 }
+
+watch(isOpen, (open) => {
+  document.body.style.overflow = open ? 'hidden' : ''
+})
+
+onBeforeUnmount(() => {
+  document.body.style.overflow = ''
+})
 </script>
 
 <template>
@@ -59,7 +67,15 @@ const closeMenu = () => {
         </button>
       </div>
 
-      <div v-if="isOpen" class="pb-3 lg:hidden">
+      <Teleport to="body">
+        <div
+          v-if="isOpen"
+          class="fixed inset-x-0 top-16 bottom-0 z-40 bg-black/40 lg:hidden sm:top-18"
+          @click="closeMenu"
+        />
+      </Teleport>
+
+      <div v-if="isOpen" class="relative z-50 pb-3 lg:hidden">
         <nav class="surface-card-soft flex flex-col gap-2 rounded-[1.4rem] p-3">
           <NuxtLink
             v-for="item in navigation"
