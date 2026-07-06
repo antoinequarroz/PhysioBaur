@@ -51,14 +51,7 @@ const siteStore = useSiteStore()
                 Physiothérapie générale, thérapie manuelle et physiothérapie du
                 sport à Sion, au cabinet et à domicile sur prescription.
               </p>
-              <p
-                class="mt-4 max-w-xl text-[0.98rem] leading-7 font-medium text-[var(--color-heading)] sm:text-lg sm:leading-8"
-              >
-                Votre rééducation, votre rythme. Que l'objectif soit de
-                reprendre le travail, le sport ou la compétition, chaque étape
-                du traitement est pensée pour vous redonner confiance dans le
-                mouvement.
-              </p>
+
               <div class="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row">
                 <AppButton label="Prendre rendez-vous" href="/#contact" />
                 <AppButton
@@ -82,7 +75,8 @@ const siteStore = useSiteStore()
                 </span>
                 <span class="min-w-0">
                   Approuvé par des sportifs professionnels —
-                  <span class="font-medium text-[var(--color-heading)] underline underline-offset-2"
+                  <span
+                    class="font-medium text-[var(--color-heading)] underline underline-offset-2"
                     >voir les avis</span
                   >
                 </span>
@@ -97,10 +91,14 @@ const siteStore = useSiteStore()
                 class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_58%_45%,rgba(59,130,246,0.16),transparent_46%),radial-gradient(circle_at_72%_58%,rgba(99,102,241,0.12),transparent_34%)] blur-2xl"
               />
               <ClientOnly>
-                <PhysioRoomScene />
+                <div
+                  class="aspect-square w-[calc(100%+3rem)] max-w-[660px] shrink-0 -mx-6 sm:max-w-[820px] lg:mx-0 lg:mr-20 lg:w-[calc(100%+6rem)] lg:max-w-none"
+                >
+                  <SplineScene />
+                </div>
                 <template #fallback>
                   <div
-                    class="aspect-square w-full max-w-[620px] sm:max-w-[760px]"
+                    class="aspect-square w-[calc(100%+3rem)] max-w-[660px] shrink-0 -mx-6 sm:max-w-[820px] lg:mx-0 lg:mr-20 lg:w-[calc(100%+6rem)] lg:max-w-none"
                   />
                 </template>
               </ClientOnly>
