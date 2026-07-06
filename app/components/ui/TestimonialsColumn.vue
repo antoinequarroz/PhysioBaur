@@ -9,9 +9,11 @@ const props = withDefaults(defineProps<{
   testimonials: TestimonialItem[]
   duration?: number
   className?: string
+  paused?: boolean
 }>(), {
   duration: 18,
-  className: ''
+  className: '',
+  paused: false
 })
 
 const repeatedTestimonials = computed(() => [...props.testimonials, ...props.testimonials])
@@ -33,6 +35,7 @@ const getInitials = (name: string) => {
   >
     <div
       class="testimonials-column flex flex-col gap-6 pb-6"
+      :class="{ 'testimonials-column-paused': props.paused }"
       :style="{ '--column-duration': `${props.duration}s` }"
     >
       <article
@@ -72,7 +75,8 @@ const getInitials = (name: string) => {
   will-change: transform;
 }
 
-.testimonials-column:hover {
+.testimonials-column:hover,
+.testimonials-column-paused {
   animation-play-state: paused;
 }
 

@@ -76,8 +76,10 @@ const mapZoom = 16
                 :key="item.label"
                 class="border-t border-[var(--color-border-strong)] pt-4"
               >
-                <div class="flex items-start justify-between gap-4">
-                  <div>
+                <div
+                  class="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                >
+                  <div class="min-w-0">
                     <p class="text-sm text-[var(--color-text-muted)]">
                       {{ item.label }}
                     </p>

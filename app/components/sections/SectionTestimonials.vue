@@ -51,6 +51,8 @@ const firstColumn = featuredTestimonials.slice(0, 3)
 const secondColumn = featuredTestimonials.slice(2, 5)
 const thirdColumn = featuredTestimonials.slice(4, 7)
 
+const isPaused = ref(false)
+
 const trustNames = [
   'Jérémie Heitz',
   'Yvon Mvogo',
@@ -87,18 +89,34 @@ const trustNames = [
           <div
             class="grid max-h-[34rem] gap-4 overflow-hidden sm:max-h-[40rem] sm:gap-5 md:max-h-[46rem] md:grid-cols-2 md:gap-6 lg:grid-cols-3"
           >
-            <TestimonialsColumn :testimonials="firstColumn" :duration="16" />
+            <TestimonialsColumn
+              :testimonials="firstColumn"
+              :duration="16"
+              :paused="isPaused"
+            />
             <TestimonialsColumn
               :testimonials="secondColumn"
               class="hidden md:block"
               :duration="18"
+              :paused="isPaused"
             />
             <TestimonialsColumn
               :testimonials="thirdColumn"
               class="hidden lg:block"
               :duration="20"
+              :paused="isPaused"
             />
           </div>
+
+          <button
+            type="button"
+            class="surface-card-soft !absolute bottom-3 right-3 z-20 flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-heading)]"
+            :aria-label="isPaused ? 'Reprendre le défilement des avis' : 'Mettre en pause le défilement des avis'"
+            :aria-pressed="isPaused"
+            @click="isPaused = !isPaused"
+          >
+            <span class="text-sm leading-none">{{ isPaused ? '▶' : '❚❚' }}</span>
+          </button>
         </div>
       </AppReveal>
 

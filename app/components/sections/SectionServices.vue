@@ -141,6 +141,56 @@ const serviceCards: ServiceCard[] = [
 
 const activeIndex = ref(0)
 const activeService = computed(() => serviceCards[activeIndex.value]!)
+
+// Below lg, the image carousel is replaced by a compact prev/pause/next
+// control (no photos) so the technique list doesn't lose screen space to it.
+const isMobile = ref(false)
+const isMobilePaused = ref(false)
+let mobileMediaQuery: MediaQueryList | null = null
+let mobileTimer: ReturnType<typeof setInterval> | null = null
+
+const updateIsMobile = () => {
+  isMobile.value = mobileMediaQuery?.matches ?? false
+}
+
+const goToIndex = (index: number) => {
+  activeIndex.value = (index + serviceCards.length) % serviceCards.length
+}
+const goToNext = () => goToIndex(activeIndex.value + 1)
+const goToPrevious = () => goToIndex(activeIndex.value - 1)
+const toggleMobilePause = () => {
+  isMobilePaused.value = !isMobilePaused.value
+}
+
+const stopMobileAutoplay = () => {
+  if (mobileTimer) {
+    clearInterval(mobileTimer)
+    mobileTimer = null
+  }
+}
+const startMobileAutoplay = () => {
+  stopMobileAutoplay()
+  if (!isMobile.value || isMobilePaused.value) {
+    return
+  }
+  mobileTimer = setInterval(goToNext, 2800)
+}
+
+watch([isMobile, isMobilePaused], () => {
+  startMobileAutoplay()
+})
+
+onMounted(() => {
+  mobileMediaQuery = window.matchMedia('(max-width: 1023px)')
+  updateIsMobile()
+  mobileMediaQuery.addEventListener('change', updateIsMobile)
+  startMobileAutoplay()
+})
+
+onBeforeUnmount(() => {
+  mobileMediaQuery?.removeEventListener('change', updateIsMobile)
+  stopMobileAutoplay()
+})
 </script>
 
 <template>
@@ -196,14 +246,42 @@ const activeService = computed(() => serviceCards[activeIndex.value]!)
                 </li>
               </ul>
             </div>
+
+            <div class="mt-5 flex items-center justify-center gap-3 lg:hidden">
+              <button
+                type="button"
+                class="surface-card-soft flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-heading)]"
+                aria-label="Technique précédente"
+                @click="goToPrevious"
+              >
+                <span class="text-lg leading-none">&lsaquo;</span>
+              </button>
+              <button
+                type="button"
+                class="surface-card-soft flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-heading)]"
+                :aria-label="isMobilePaused ? 'Reprendre le défilement automatique' : 'Mettre en pause le défilement automatique'"
+                :aria-pressed="isMobilePaused"
+                @click="toggleMobilePause"
+              >
+                <span class="text-sm leading-none">{{ isMobilePaused ? '▶' : '❚❚' }}</span>
+              </button>
+              <button
+                type="button"
+                class="surface-card-soft flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-heading)]"
+                aria-label="Technique suivante"
+                @click="goToNext"
+              >
+                <span class="text-lg leading-none">&rsaquo;</span>
+              </button>
+            </div>
           </div>
         </AppReveal>
 
-        <AppReveal :delay="80">
+        <AppReveal v-if="!isMobile" :delay="80" class="hidden lg:block">
           <CardStack
             :items="serviceCards"
             :initial-index="0"
-            :auto-advance="true"
+            :auto-advance="!isMobile"
             :interval-ms="2800"
             @change="(index) => (activeIndex = index)"
           />
