@@ -83,7 +83,12 @@ const siteStore = useSiteStore()
               </NuxtLink>
             </div>
           </AppReveal>
-          <AppReveal :delay="120" :distance="20" :scale="0.99" class="hidden lg:block">
+          <AppReveal
+            :delay="120"
+            :distance="20"
+            :scale="0.99"
+            class="hidden lg:block"
+          >
             <div
               class="relative flex w-full justify-center lg:mt-0 lg:min-h-[min(70svh,780px)] lg:items-center"
             >
@@ -92,7 +97,7 @@ const siteStore = useSiteStore()
               />
               <ClientOnly>
                 <div
-                  class="aspect-square w-[calc(100%+3rem)] max-w-[660px] shrink-0 -mx-6 sm:max-w-[820px] lg:mx-0 lg:mr-20 lg:w-[calc(100%+6rem)] lg:max-w-none"
+                  class="aspect-square w-[calc(100%+3rem)] max-w-[660px] shrink-0 -mx-6 sm:max-w-[820px] lg:mx-0 lg:mr-10 lg:w-[calc(100%+14rem)] lg:max-w-none"
                 >
                   <SplineScene />
                 </div>
