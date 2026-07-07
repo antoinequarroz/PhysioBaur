@@ -1,3 +1,24 @@
+<script setup lang="ts">
+const reasons = [
+  {
+    title: 'Approche rigoureuse',
+    text: "Une physiothérapie moderne appuyée sur les données scientifiques les plus récentes et l'expérience clinique.",
+  },
+  {
+    title: 'Efficacité thérapeutique',
+    text: 'Une prise en charge structurée, orientée vers des objectifs clairs et des résultats concrets.',
+  },
+  {
+    title: 'Expertise terrain',
+    text: "Physiothérapie générale, thérapie manuelle & rééducation du sportif. Du quotidien jusqu'aux exigences du sport de haut niveau.",
+  },
+  {
+    title: 'Suivi sur mesure',
+    text: 'Une prise en charge adaptée à chaque patient, avec une progression lisible et un cadre de soin clair.',
+  },
+]
+</script>
+
 <template>
   <section id="pourquoi" class="section-space relative overflow-hidden">
     <AppContainer>
@@ -14,6 +35,121 @@
         title="Une pratique fondée sur les preuves, au service de votre performance"
         description="PhysioBaur s'appuie sur une approche evidence-based, l'expérience clinique et le terrain pour proposer des soins sérieux, actuels et adaptés à chaque situation."
       />
+
+      <AppReveal :delay="70">
+        <div class="mx-auto mt-8 max-w-6xl sm:mt-9">
+          <div
+            class="mx-auto grid max-w-4xl gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4"
+          >
+            <AppReveal
+              v-for="(reason, index) in reasons"
+              :key="reason.title"
+              :delay="120 + index * 70"
+            >
+              <div
+                class="why-card why-card-animated h-full rounded-[1.2rem] px-4 py-4 sm:rounded-[1.35rem] sm:px-5 sm:py-5"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <p
+                    class="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]"
+                  >
+                    {{ reason.title }}
+                  </p>
+                  <span class="why-index text-[0.82rem] font-semibold">
+                    0{{ index + 1 }}
+                  </span>
+                </div>
+                <p
+                  class="mt-2.5 text-sm leading-6 text-[var(--color-text-muted)]"
+                >
+                  {{ reason.text }}
+                </p>
+              </div>
+            </AppReveal>
+          </div>
+        </div>
+      </AppReveal>
     </AppContainer>
   </section>
 </template>
+
+<style scoped>
+.why-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.why-card {
+  background: linear-gradient(
+    145deg,
+    color-mix(in oklab, var(--color-surface-elevated) 82%, transparent),
+    color-mix(in oklab, var(--color-surface) 90%, transparent)
+  );
+  border: 1px solid var(--color-border-strong);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(
+    in oklab,
+    var(--color-accent) 26%,
+    var(--color-border-strong)
+  );
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.09);
+}
+
+.why-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at top right,
+    rgba(59, 130, 246, 0.1),
+    transparent 28%
+  );
+}
+
+.why-card-animated::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.14) 38%,
+    transparent 62%
+  );
+  transform: translateX(-140%);
+  transition: transform 0.7s ease;
+}
+
+.why-card-animated:hover::after {
+  transform: translateX(140%);
+}
+
+.why-index {
+  color: color-mix(in oklab, var(--color-accent) 76%, white 24%);
+  letter-spacing: 0.08em;
+}
+
+.dark .why-card {
+  box-shadow: 0 16px 38px rgba(2, 6, 23, 0.24);
+}
+
+.dark .why-card:hover {
+  box-shadow: 0 20px 46px rgba(2, 6, 23, 0.3);
+}
+
+@media (max-width: 1023px) {
+  .why-card:hover {
+    transform: translateY(-2px);
+  }
+}
+</style>
