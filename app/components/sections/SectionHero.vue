@@ -97,13 +97,13 @@ const siteStore = useSiteStore()
               />
               <ClientOnly>
                 <div
-                  class="aspect-square w-full max-w-[620px] shrink-0 sm:max-w-[760px] lg:w-[calc(100%+10rem)] lg:max-w-none"
+                  class="aspect-square w-full max-w-[620px] sm:max-w-[760px]"
                 >
                   <SplineScene />
                 </div>
                 <template #fallback>
                   <div
-                    class="aspect-square w-full max-w-[620px] shrink-0 sm:max-w-[760px] lg:w-[calc(100%+10rem)] lg:max-w-none"
+                    class="aspect-square w-full max-w-[620px] sm:max-w-[760px]"
                   />
                 </template>
               </ClientOnly>
