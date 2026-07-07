@@ -99,7 +99,7 @@
           />
           <div class="mt-7 flex flex-wrap gap-3 sm:mt-8">
             <AppBadge label="MSc Santé HES-SO - UNIL" />
-            <AppBadge label="Head physio Suisse U19" />
+            <AppBadge label="Head physio Suisse Football U19" />
             <AppBadge label="Maître d'enseignement HES-SO" />
           </div>
           <div

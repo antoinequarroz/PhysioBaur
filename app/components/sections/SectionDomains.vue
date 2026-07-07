@@ -26,19 +26,19 @@ const domains: DomainItem[] = [
     points: [
       {
         title: 'Prise en charge avant et après une intervention chirurgicale',
-        text: 'Prothèse, coiffe des rotateurs, LCA, méniscectomie, vertébroplastie.',
+        text: 'Prothèse, coiffe des rotateurs, LCA, méniscectomie, vertébroplastie, …',
       },
       {
         title: 'Traitement des douleurs aiguës, chroniques et rhumatismales',
-        text: 'Lombalgies, cervicalgies, hernies discales, tendinopathies, arthrose, arthrite.',
+        text: 'Lombalgies, cervicalgies, hernies discales, tendinopathies, arthrose, arthrite, …',
       },
       {
         title: 'Prise en charge des déficiences articulaires',
-        text: 'Arthrose, lésions ligamentaires, entorses, luxations, fractures.',
+        text: 'Arthrose, lésions ligamentaires, entorses, luxations, fractures, …',
       },
       {
         title: 'Rééducation des lésions musculaires et tendineuses',
-        text: 'Déchirures musculaires, tendinopathies.',
+        text: 'Déchirures musculaires, tendinopathies, …',
       },
     ],
   },
@@ -47,7 +47,7 @@ const domains: DomainItem[] = [
     step: 'Domaine 2',
     title: 'Physiothérapie du sport',
     description:
-      "L'excellence pour les athlètes exigeants. Nous accompagnons les sportifs de tous niveaux, de l'amateur au professionnel, dans une démarche d'optimisation constante. Notre priorité est de repousser vos limites tout en garantissant l'intégrité de votre structure physique.",
+      "L'excellence pour les athlètes exigeants. Nous accompagnons les sportifs de tous niveaux, de l'amateur au professionnel, dans une démarche d'optimisation constante. Notre priorité est de repousser vos limites tout en garantissant l'intégrité de votre intégrité physique.",
     image: '/images/services/physiosport2.jpg',
     points: [
       {
@@ -178,7 +178,7 @@ onBeforeUnmount(() => {
       <AppSectionHeading
         eyebrow="Nos domaines d'expertise"
         title="Trois grands domaines structurent la prise en charge du cabinet"
-        description="Votre objectif devient le nôtre : chaque traitement est conçu, du terrain sportif au quotidien, avec la même exigence clinique."
+        description="Votre objectif devient le nôtre : chaque traitement est conçu, du terrain au quotidien, avec la même exigence clinique."
         align="center"
       />
 

@@ -10,7 +10,7 @@ const reasons = [
   },
   {
     title: 'Expertise terrain',
-    text: 'Physiothérapie générale, thérapie manuelle et rééducation du sportif, du quotidien au sport exigeant.',
+    text: "Physiothérapie générale, thérapie manuelle & rééducation du sportif. Du quotidien jusqu'aux exigences du sport de haut niveau.",
   },
   {
     title: 'Suivi sur mesure',
@@ -93,7 +93,7 @@ const resetTilt = () => {
               >
                 Le cabinet associe physiothérapie générale et physiothérapie du
                 sport avec une même exigence : proposer des soins fiables,
-                personnalisés et appuyés par les meilleures pratiques actuelles.
+                personnalisés et appuyés par les meilleures évidences actuelles.
               </p>
             </div>
 

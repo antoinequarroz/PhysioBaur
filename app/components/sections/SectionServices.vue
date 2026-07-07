@@ -100,13 +100,13 @@ const serviceCards: ServiceCard[] = [
     tag: 'Suivi',
     title: 'Accompagnement personnalisé',
     description:
-      'Des objectifs clairs, des conseils utiles et un suivi adapté à votre situation, du quotidien au sport',
+      "Des objectifs clairs, des conseils utiles et un suivi adapté à votre situation, du quotidien à la reprise de l'activité sportive.",
     imageSrc: '/images/services/fitness.jpg',
     items: [
       'Conseils pratiques',
       'Progression lisible',
       'Suivi adapté',
-      'Retour au quotidien ou au sport',
+      "Retour aux activités quotidiennes et/ou à l'activité sportive.",
     ],
   },
   {
@@ -210,8 +210,8 @@ onBeforeUnmount(() => {
           <div class="max-w-2xl">
             <AppSectionHeading
               eyebrow="Expertise technique"
-              title="Une approche validée par la recherche"
-              description="Le cabinet propose une physiothérapie générale et du sport appuyée sur des techniques sélectionnées selon la situation clinique, les besoins du patient et la progression attendue."
+              title="L'expertise scientifique au service de votre mouvement"
+              description="Que ce soit pour une rééducation générale ou une pratique sportive, notre approche repose sur des techniques validées par la recherche. Nous personnalisons chaque soin en fonction de votre profil, de vos besoins et de votre évolution pour vous mener vers vos objectifs."
             />
 
             <div
