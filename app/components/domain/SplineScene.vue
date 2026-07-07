@@ -11,7 +11,7 @@ onMounted(async () => {
   application = new Application(canvasRef.value)
   await application.load('/spline/scene.splinecode')
   application.setBackgroundColor('transparent')
-  application.setZoom(0.24)
+  application.setZoom(0.19)
 })
 
 onBeforeUnmount(() => {
