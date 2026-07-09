@@ -59,6 +59,7 @@ const trustNames = [
   'Sybille Blanjean',
   'Aurèle Amenda',
   'Dereck Kutesa',
+  'Winsley Boteli',
 ]
 </script>
 
@@ -145,8 +146,8 @@ const trustNames = [
             <h3
               class="mt-3 text-[1.55rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-2xl"
             >
-              D'autres sportifs et patients ont également fait confiance au
-              cabinet.
+              Plusieurs autres sportifs et patients ont également fait
+              confiance à notre cabinet.
             </h3>
             <p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
               Quelques profils supplémentaires ayant bénéficié des soins de

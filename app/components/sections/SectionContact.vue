@@ -66,8 +66,8 @@ const mapZoom = 16
           <div class="max-w-xl">
             <AppSectionHeading
               eyebrow="Contact"
-              title="Expliquez votre situation Prenons contact"
-              description="Un premier échange simple avec votre cabinet PhysioBaur pour comprendre votre besoin et vous orienter."
+              title="Expliquez-nous votre situation Prenons contact"
+              description="Un échange simple et rapide afin de cibler vos besoins et organiser vos futures séances."
             />
 
             <div class="mt-6 space-y-4 sm:mt-7">
@@ -129,8 +129,8 @@ const mapZoom = 16
               <p
                 class="max-w-lg text-sm leading-7 text-[var(--color-text-muted)]"
               >
-                Vous pouvez laisser un message ou appeler directement le cabinet
-                à Sion.
+                Envoyez-nous un message via le formulaire ou appelez
+                directement le cabinet selon votre préférence.
               </p>
             </div>
           </div>

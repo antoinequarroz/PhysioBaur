@@ -8,7 +8,6 @@ type TariffLine = {
 type TariffCard = {
   eyebrow: string
   title: string
-  description: string
   lines: TariffLine[]
   isPopular?: boolean
 }
@@ -17,8 +16,6 @@ const tariffCards: TariffCard[] = [
   {
     eyebrow: 'Technique complémentaire',
     title: 'Dry needling',
-    description:
-      'Intégré selon la situation clinique dans une prise en charge ciblée et adaptée au bilan.',
     lines: [
       {
         label: 'Séance de dry needling',
@@ -30,8 +27,6 @@ const tariffCards: TariffCard[] = [
   {
     eyebrow: 'Physiothérapie',
     title: 'Physiothérapie',
-    description:
-      "Le format central du cabinet pour le suivi général, la rééducation fonctionnelle et le retour progressif à l'activité.",
     isPopular: true,
     lines: [
       {
@@ -49,8 +44,6 @@ const tariffCards: TariffCard[] = [
   {
     eyebrow: 'Récupération',
     title: 'Massage',
-    description:
-      'Détente musculaire et récupération, en complément du suivi thérapeutique.',
     lines: [
       {
         label: 'Massage',
@@ -69,7 +62,7 @@ const tariffCards: TariffCard[] = [
 const supportBadges = [
   'LAMal',
   'LAA',
-  'Jusqu’à 9 séances',
+  'Remboursée',
   'Prescription médicale',
 ]
 </script>
@@ -85,7 +78,7 @@ const supportBadges = [
       <AppSectionHeading
         eyebrow="Tarifs"
         title="Des tarifs clairs et une prise en charge transparente"
-        description="En Suisse, la physiothérapie est prise en charge par l'assurance maladie de base (LAMal) et l'assurance accident (LAA), sous certaines conditions. Une prescription médicale est nécessaire et couvre généralement jusqu’à 9 séances par prescription."
+        description="En Suisse, les séances de physiothérapie sont remboursées par l'assurance de base (LAMal) ou l'assurance accident (LAA). Pour en bénéficier, une prescription médicale est nécessaire ; celle-ci couvre généralement un cycle allant jusqu'à 9 séances par prescription."
         align="center"
       />
 
@@ -131,11 +124,6 @@ const supportBadges = [
             >
               {{ card.title }}
             </h3>
-            <p
-              class="mt-3 text-sm leading-6 text-[var(--color-text-muted)] sm:leading-7"
-            >
-              {{ card.description }}
-            </p>
 
             <div class="mt-5 space-y-3.5 sm:mt-6 sm:space-y-4">
               <div
@@ -191,9 +179,10 @@ const supportBadges = [
           <p
             class="text-sm leading-7 text-[var(--color-text-muted)] sm:text-base"
           >
-            Un renouvellement de prescription peut être accordé si nécessaire.
-            Les thérapies peuvent être dispensées en cabinet ou à domicile selon
-            l'ordonnance médicale et les traitements requis.
+            Un renouvellement de prescription peut être accordé si la poursuite
+            des séances est nécessaire. Notre prise en charge s'adapte à vos
+            besoins : elle s'effectue en cabinet ou à domicile, conformément à
+            votre prescription médicale.
           </p>
         </div>
       </AppReveal>

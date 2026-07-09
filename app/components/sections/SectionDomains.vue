@@ -47,7 +47,7 @@ const domains: DomainItem[] = [
     step: 'Domaine 2',
     title: 'Physiothérapie du sport',
     description:
-      "L'excellence pour les athlètes exigeants. Nous accompagnons les sportifs de tous niveaux, de l'amateur au professionnel, dans une démarche d'optimisation constante. Notre priorité est de repousser vos limites tout en garantissant l'intégrité de votre intégrité physique.",
+      "L'excellence au service de votre performance. Du sportif amateur à l'athlète professionnel, nous vous accompagnons dans une démarche d'optimisation constante. Notre priorité : repousser vos limites tout en préservant durablement votre intégrité physique.",
     image: '/images/services/physiosport2.jpg',
     points: [
       {
@@ -74,7 +74,7 @@ const domains: DomainItem[] = [
     step: 'Domaine 3',
     title: 'Traitement à domicile',
     description:
-      "Des traitements adaptés aux personnes âgées, à mobilité réduite, accidentées ou en situation de handicap, avec un objectif d'autonomie et de continuité des soins.",
+      "Des soins adaptés aux personnes âgées, à mobilité réduite, accidentées ou en situation de handicap. Notre objectif est de favoriser votre autonomie tout en garantissant la continuité de votre prise en charge, directement chez vous.",
     intro:
       'Sur prescription médicale, déplacements à domicile dans la région de Sion et Grimisuat.',
     image: '/images/services/domicilephysio.jpg',
@@ -177,8 +177,8 @@ onBeforeUnmount(() => {
 
       <AppSectionHeading
         eyebrow="Nos domaines d'expertise"
-        title="Trois grands domaines structurent la prise en charge du cabinet"
-        description="Votre objectif devient le nôtre : chaque traitement est conçu, du terrain au quotidien, avec la même exigence clinique."
+        title="Notre prise en charge se structure autour de trois grands piliers thérapeutiques"
+        description="Votre objectif devient le nôtre : du quotidien jusqu'au terrain, chaque traitement est conçu avec la même exigence clinique."
         align="center"
       />
 

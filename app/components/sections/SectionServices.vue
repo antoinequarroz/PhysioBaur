@@ -12,7 +12,7 @@ const serviceCards: ServiceCard[] = [
     tag: 'Musculosquelettique',
     title: 'Système musculo-squelettique',
     description:
-      'Une prise en charge structurée des douleurs, limitations fonctionnelles et troubles musculo-squelettiques, avec des outils adaptés aux objectifs du traitement',
+      'Une prise en charge globale et structurée des douleurs ainsi que des limitations fonctionnelles. Nous utilisons des outils ciblés pour restaurer la mobilité et répondre précisément aux objectifs de votre traitement.',
     imageSrc:
       'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&auto=format&fit=crop&q=80',
     items: [
@@ -72,7 +72,7 @@ const serviceCards: ServiceCard[] = [
     tag: 'Complémentaire',
     title: 'Dry needling',
     description:
-      'Une technique complémentaire intégrée selon le bilan clinique, la situation du patient et les objectifs thérapeutiques',
+      'Une stimulation intramusculaire précise par aiguilles sèches, intégrée selon le bilan clinique pour désactiver les points gâchettes (triggers points), relâcher les tensions profondes et accélérer la guérison.',
     imageSrc: '/images/services/dryNeedling.jpg',
     items: [
       'Trigger points',
@@ -86,7 +86,7 @@ const serviceCards: ServiceCard[] = [
     tag: 'Récupération',
     title: 'Massage thérapeutique',
     description:
-      "Un travail de récupération et de relâchement qui peut accompagner certaines phases du traitement ou de reprise de l'activité",
+      "Un travail manuel de relâchement musculaire et de régulation tissulaire, idéal pour optimiser la guérison lors des phases de traitement ou accompagner la reprise de l'activité.",
     imageSrc: '/images/services/massage.jpg',
     items: [
       'Récupération',
@@ -114,7 +114,7 @@ const serviceCards: ServiceCard[] = [
     tag: 'Outils',
     title: 'Électrostimulation & Compex',
     description:
-      'Des outils complémentaires intégrés selon les objectifs de rééducation, de renforcement ou de récupération.',
+      'Des technologies de pointe intégrées sur mesure pour optimiser le renforcement musculaire, accélérer la récupération ou accompagner les étapes clés de votre rééducation.',
     imageSrc: '/images/services/compex.jpg',
     items: [
       'Activation musculaire',
@@ -128,7 +128,7 @@ const serviceCards: ServiceCard[] = [
     tag: 'Support',
     title: 'Taping & kinesio-taping',
     description:
-      "Un appui complémentaire utile dans certaines phases de traitement, de stabilisation ou de reprise de l'activité.",
+      "Des techniques de contention et de bandes élastiques dynamiques, utilisées pour stabiliser les articulations, soulager les douleurs et/ou sécuriser la reprise de l'activité.",
     imageSrc: '/images/services/tapping.jpg',
     items: [
       'Soutien articulaire',
@@ -211,7 +211,7 @@ onBeforeUnmount(() => {
             <AppSectionHeading
               eyebrow="Expertise technique"
               title="L'expertise scientifique au service de votre mouvement"
-              description="Que ce soit pour une rééducation générale ou une pratique sportive, notre approche repose sur des techniques validées par la recherche. Nous personnalisons chaque soin en fonction de votre profil, de vos besoins et de votre évolution pour vous mener vers vos objectifs."
+              description="Que ce soit pour une rééducation générale ou une pratique sportive, notre approche repose sur des techniques validées par la recherche. Nous personnalisons chaque prise en charge en fonction de votre profil, de vos besoins et de votre évolution pour vous mener vers vos objectifs."
             />
 
             <div

@@ -39,7 +39,7 @@
                   class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
                 />
                 <p class="text-sm leading-6 text-[var(--color-text-muted)]">
-                  Diplômé HES-SO Valais/Wallis - 2010
+                  Bachelor of Science (BSc) en Physiothérapie — HES-SO Valais/Wallis (2010)
                 </p>
               </div>
               <div
@@ -49,7 +49,7 @@
                   class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
                 />
                 <p class="text-sm leading-6 text-[var(--color-text-muted)]">
-                  MSc Santé - HES-SO / UNIL
+                  CAS en Réhabilitation du Sportif
                 </p>
               </div>
               <div
@@ -59,7 +59,7 @@
                   class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
                 />
                 <p class="text-sm leading-6 text-[var(--color-text-muted)]">
-                  Head physio - Équipe nationale Suisse de Football U19
+                  CAS en Thérapie Manuelle
                 </p>
               </div>
               <div
@@ -69,7 +69,37 @@
                   class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
                 />
                 <p class="text-sm leading-6 text-[var(--color-text-muted)]">
-                  Maître d'enseignement HES-SO Valais/Wallis
+                  Diplôme en Thérapie Manuelle Ostéopathique
+                </p>
+              </div>
+              <div
+                class="flex items-start gap-3 border-t border-[var(--color-border)] pt-4"
+              >
+                <div
+                  class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
+                />
+                <p class="text-sm leading-6 text-[var(--color-text-muted)]">
+                  Master of Science (MSc) en Sciences de la Santé — HES-SO / UNIL
+                </p>
+              </div>
+              <div
+                class="flex items-start gap-3 border-t border-[var(--color-border)] pt-4"
+              >
+                <div
+                  class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
+                />
+                <p class="text-sm leading-6 text-[var(--color-text-muted)]">
+                  Head Physiothérapeute — Équipe nationale Suisse de Football U19
+                </p>
+              </div>
+              <div
+                class="flex items-start gap-3 border-t border-[var(--color-border)] pt-4"
+              >
+                <div
+                  class="mt-[0.38rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-accent)]"
+                />
+                <p class="text-sm leading-6 text-[var(--color-text-muted)]">
+                  Maître d'enseignement — HES-SO Valais/Wallis
                 </p>
               </div>
             </div>
