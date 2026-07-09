@@ -60,6 +60,7 @@ const trustNames = [
   'Aurèle Amenda',
   'Dereck Kutesa',
   'Winsley Boteli',
+  'Et tant d\'autres ...',
 ]
 </script>
 

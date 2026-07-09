@@ -66,7 +66,8 @@ const mapZoom = 16
           <div class="max-w-xl">
             <AppSectionHeading
               eyebrow="Contact"
-              title="Expliquez-nous votre situation Prenons contact"
+              title="Expliquez-nous votre situation
+Prenons contact"
               description="Un échange simple et rapide afin de cibler vos besoins et organiser vos futures séances."
             />
 
