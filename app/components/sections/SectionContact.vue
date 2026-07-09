@@ -129,8 +129,8 @@ const mapZoom = 16
               <p
                 class="max-w-lg text-sm leading-7 text-[var(--color-text-muted)]"
               >
-                Envoyez-nous un message via le formulaire ou appelez
-                directement le cabinet selon votre préférence.
+                Envoyez-nous un message via le formulaire ou appelez directement
+                le cabinet selon votre préférence.
               </p>
             </div>
           </div>

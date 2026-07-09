@@ -112,11 +112,17 @@ const trustNames = [
           <button
             type="button"
             class="surface-card-soft !absolute bottom-3 right-3 z-20 flex h-10 w-10 items-center justify-center rounded-full text-[var(--color-heading)]"
-            :aria-label="isPaused ? 'Reprendre le défilement des avis' : 'Mettre en pause le défilement des avis'"
+            :aria-label="
+              isPaused
+                ? 'Reprendre le défilement des avis'
+                : 'Mettre en pause le défilement des avis'
+            "
             :aria-pressed="isPaused"
             @click="isPaused = !isPaused"
           >
-            <span class="text-sm leading-none">{{ isPaused ? '▶' : '❚❚' }}</span>
+            <span class="text-sm leading-none">{{
+              isPaused ? '▶' : '❚❚'
+            }}</span>
           </button>
         </div>
       </AppReveal>
@@ -146,8 +152,8 @@ const trustNames = [
             <h3
               class="mt-3 text-[1.55rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-2xl"
             >
-              Plusieurs autres sportifs et patients ont également fait
-              confiance à notre cabinet.
+              Plusieurs autres sportifs et patients ont également fait confiance
+              à notre cabinet.
             </h3>
             <p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
               Quelques profils supplémentaires ayant bénéficié des soins de
