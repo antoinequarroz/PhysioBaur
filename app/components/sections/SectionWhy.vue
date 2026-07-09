@@ -1,20 +1,20 @@
 <script setup lang="ts">
 const reasons = [
   {
-    title: 'Approche rigoureuse',
-    text: "Une physiothérapie moderne appuyée sur les données scientifiques les plus récentes et l'expérience clinique.",
+    title: 'Rigueur & Expertise',
+    text: "Une physiothérapie moderne, fondée sur les dernières données scientifiques et enrichie par l'expérience clinique.",
   },
   {
     title: 'Efficacité thérapeutique',
     text: 'Une prise en charge structurée, orientée vers des objectifs clairs et des résultats concrets.',
   },
   {
-    title: 'Expertise terrain',
-    text: "Physiothérapie générale, thérapie manuelle & rééducation du sportif. Du quotidien jusqu'aux exigences du sport de haut niveau.",
+    title: 'Expertise de terrain',
+    text: "Physiothérapie générale, thérapie manuelle et réathlétisation. De vos activités quotidiennes jusqu'aux exigences du sport de haut niveau.",
   },
   {
     title: 'Suivi sur mesure',
-    text: 'Une prise en charge adaptée à chaque patient, avec une progression lisible et un cadre de soin clair.',
+    text: 'Une prise en charge adaptée à chaque patient, définie par des objectifs clairs et une progression lisible à chaque étape de votre prise en charge.',
   },
 ]
 </script>
@@ -33,7 +33,7 @@ const reasons = [
         align="center"
         eyebrow="Notre philosophie"
         title="Une pratique fondée sur les preuves, au service de votre performance"
-        description="PhysioBaur s'appuie sur une approche evidence-based, l'expérience clinique et le terrain pour proposer des soins sérieux, actuels et adaptés à chaque situation."
+        description="Chez PhysioBaur, nous lions la rigueur scientifique à la réalité du terrain. En combinant une approche evidence-based, notre expérience clinique et notre pratique de terrain, nous concevons des soins sur mesure et actuels pour optimiser votre récupération et booster vos performances."
       />
 
       <AppReveal :delay="70">

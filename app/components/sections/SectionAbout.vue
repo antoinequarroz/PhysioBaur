@@ -125,7 +125,7 @@
           <AppSectionHeading
             eyebrow="Votre thérapeute"
             title="Un expert reconnu à votre service"
-            description="Fondateur de PhysioBaur, Christophe Baur s'appuie sur plus de 15 ans d'expérience pour proposer une prise en charge exigeante, nourrie par la clinique, l'enseignement et le sport."
+            description="Fondateur de PhysioBaur, Christophe Baur s'appuie sur plus de 15 ans d'expérience pour proposer une prise en charge exigeante. Son approche est nourrie par la clinique, l'enseignement et un parcours ancré dans le sport de haut niveau professionnel."
           />
           <div class="mt-7 flex flex-wrap gap-3 sm:mt-8">
             <AppBadge label="MSc Santé HES-SO - UNIL" />
@@ -142,25 +142,26 @@
             </div>
             <p class="text-sm leading-6 text-[var(--color-text-muted)]">
               <span class="font-semibold text-[var(--color-heading)]"
-                >Maître d'enseignement HES-SO Valais/Wallis</span
+                >Maître d'enseignement à la HES-SO Valais/Wallis</span
               >
-              — implication directe dans la formation des futurs
-              physiothérapeutes en Valais.
+              — Implication directe dans la formation et l'accompagnement des
+              futurs physiothérapeutes valaisans.
             </p>
           </div>
           <p
             class="mt-7 max-w-2xl text-base leading-7 text-[var(--color-text-muted)] sm:mt-8"
           >
-            Spécialiste de la physiothérapie générale et du sport, il accompagne
-            aussi bien les sportifs que les personnes souhaitant retrouver leur
-            mobilité, leur confort et leur capacité fonctionnelle au quotidien.
+            Spécialiste de la physiothérapie générale et du sport, Christophe
+            accompagne aussi bien les athlètes que les patients désireux de
+            retrouver leur mobilité, leur confort et leur pleine capacité
+            fonctionnelle au quotidien.
           </p>
           <p
             class="mt-4 max-w-2xl text-base leading-7 text-[var(--color-text-muted)]"
           >
-            Soucieux de transmettre des pratiques solides et de rester au
-            contact des preuves scientifiques, il intervient également comme
-            maître d'enseignement au sein de la filière physiothérapie de la
+            Soucieux de transmettre des pratiques rigoureuses et de rester à la
+            pointe des avancées scientifiques, il s'investit également comme
+            Maître d'enseignement au sein de la filière Physiothérapie de la
             HES-SO Valais/Wallis.
           </p>
         </AppReveal>
