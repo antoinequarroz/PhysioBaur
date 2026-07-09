@@ -60,10 +60,10 @@ const tariffCards: TariffCard[] = [
 ]
 
 const supportBadges = [
+  'Prescription médicale',
+  'Prise en charge remboursée',
   'LAMal',
   'LAA',
-  'Remboursée',
-  'Prescription médicale',
 ]
 </script>
 

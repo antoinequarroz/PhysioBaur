@@ -125,7 +125,7 @@
           <AppSectionHeading
             eyebrow="Votre thérapeute"
             title="Un expert reconnu à votre service"
-            description="Fondateur de PhysioBaur, Christophe Baur s'appuie sur plus de 15 ans d'expérience pour proposer une prise en charge exigeante. Son approche est nourrie par la clinique, l'enseignement et un parcours ancré dans le sport de haut niveau professionnel."
+            description="Fondateur de PhysioBaur, Christophe Baur s'appuie sur plus de 15 ans d'expérience pour proposer une prise en charge exigeante. Son approche est nourrie par la clinique, l'enseignement et un parcours ancré dans le sport professionnel."
           />
           <div class="mt-7 flex flex-wrap gap-3 sm:mt-8">
             <AppBadge label="MSc Santé HES-SO - UNIL" />

@@ -153,7 +153,7 @@ const trustNames = [
               class="mt-3 text-[1.55rem] font-semibold tracking-tight text-[var(--color-heading)] sm:text-2xl"
             >
               Plusieurs autres sportifs et patients ont également fait confiance
-              à notre cabinet.
+              à notre cabinet
             </h3>
             <p class="mt-3 text-sm leading-7 text-[var(--color-text-muted)]">
               Quelques profils supplémentaires ayant bénéficié des soins de
